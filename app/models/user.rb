@@ -3,6 +3,8 @@ class User < ApplicationRecord
   validates :email, uniqueness: true
   validates :password, length: { minimum: 6 }, allow_nil: true
 
+  before_validation :ensure_session_token
+
   attr_reader :password
 
   def password=(password)
