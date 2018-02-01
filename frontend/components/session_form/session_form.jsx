@@ -1,5 +1,31 @@
 import React from 'react';
 import {Link, withRouter} from 'react-router-dom';
+import Modal from 'react-modal';
+
+const customStyles = {
+    overlay: {
+      position: 'fixed',
+      top: 0,
+      left: 0,
+      right: 0,
+      bottom: 0,
+      backgroundColor: 'rgba(255, 255, 255, 0.75)'
+    },
+    content: {
+      position: 'absolute',
+      top: '40px',
+      left: '40px',
+      right: '40px',
+      bottom: '40px',
+      border: '1px solid #ccc',
+      background: '#fff',
+      overflow: 'auto',
+      WebkitOverflowScrolling: 'touch',
+      borderRadius: '4px',
+      outline: 'none',
+      padding: '20px'
+    }
+  };
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -9,13 +35,23 @@ class SessionForm extends React.Component {
       first_name: "",
       last_name: "",
       password: "",
-      bday: ""
+      bday: "",
+      modalIsOpen: true
     };
+
+
     this.handleSubmit = this.handleSubmit.bind(this);
 
     this.year = "";
     this.month = "";
     this.day = "";
+
+    this.openModal = this.openModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+  }
+
+  componentDidMount() {
+
   }
 
   componentWillReceiveProps(nextProps) {
@@ -44,12 +80,24 @@ class SessionForm extends React.Component {
     this.props.processForm(user);
   }
 
+  openModal() {
+    this.setState({modalIsOpen: true});
+  }
+
+  closeModal() {
+    this.setState({modalIsOpen: false});
+  }
+
+  // afterOpenModal() {
+  //   this.subtitle.style.color = '#f00';
+  // }
+
   render() {
     let statement = this.props.formType === 'signup' ? 'Already have a Luftbnb account?' : "Don't have an account?";
     let header = this.props.formType === 'signup' ? 'Sign up' : 'Log in to continue';
     let nameDiv = () => { if(this.props.formType === 'signup') {
       return (
-          <div>
+          <div className="name">
             <input
               type="text"
               placeholder="First name"
@@ -69,7 +117,7 @@ class SessionForm extends React.Component {
 
     let birthdayDiv = () => { if(this.props.formType === 'signup') {
       return (
-          <div>
+          <div className="birthday">
             <span>Birthday</span>
             <span>To sign up, you must be 18 or older. Other people won't see your birthday.</span>
             <select>
@@ -94,8 +142,16 @@ class SessionForm extends React.Component {
 
     return (
       <div>
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onAfterOpen={this.afterOpenModal}
+          onRequestClose={this.closeModal}
+          style={customStyles}
+          className="modal"
+        >
+
         <h1>{header}</h1>
-        <form onSubmit={this.handleSubmit}>
+        <form className="login-form" onSubmit={this.handleSubmit}>
           <input
             type="email"
             placeholder="Email address"
@@ -113,6 +169,7 @@ class SessionForm extends React.Component {
           <button type="submit">Submit</button>
         </form>
         <h3>{statement} {this.navLink()}</h3>
+        </Modal>
       </div>
     );
   }

@@ -1,34 +1,42 @@
 body {
   font-family: helvetica, sans-serif;
-  font-size: 12px;
-  font-weight: 200;
-  background: ;
+  font-size: 13px;
+  font-weight: 400;
+  background: white;
 }
 
 .header {
-  background: ##e6e6e6;
+  background: #fbfbfb;
   color: black;
-  border-bottom: 1px solid ##e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
 
 }
 
 .link-item {
   display: block;
-  padding: 25px 20px;
+  padding: 30px 25px;
 }
 
 .header-nav {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   margin: 0 auto;
 
 }
 
-.header-logo {
-  height: 75px;
-  width: 75px;
+.header-logo img {
+  display: block;
+   padding: 10px 20px;
+   height: 50px;
+   width: 50px;
+   padding-left: 30px;
+
 }
 
+a:hover {
+  border-bottom: 2px solid black;
+}
 
 
 .header-list {
