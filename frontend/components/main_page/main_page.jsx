@@ -7,6 +7,7 @@ class MainPage extends React.Component {
   }
 
   render() {
+
       return(
         <header className="header">
           <nav className="header-nav">
@@ -15,12 +16,12 @@ class MainPage extends React.Component {
               <img src={window.staticImages.headerImage}></img>
             </h1>
 
+            <button onClick={this.props.logout}>Logout</button>
             <div className="header-list">
-              <div><Link to="">Become a host</Link></div>
-              <div><Link to="/signup">Sign up</Link></div>
-              <div><Link to="/login">Log In</Link></div>
+              <div className="link-item"><Link to="">Become a host</Link></div>
+              <div className="link-item"><Link to="/signup">Sign up</Link></div>
+              <div className="link-item"><Link to="/login">Log In</Link></div>
             </div>
-
           </nav>
         </header>
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {Link, withRouter} from 'react-router-dom';
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -9,10 +9,13 @@ class SessionForm extends React.Component {
       first_name: "",
       last_name: "",
       password: "",
-      month: "",
-      day: "",
-      year: ""
+      bday: ""
     };
+    this.handleSubmit = this.handleSubmit.bind(this);
+
+    this.year = "";
+    this.month = "";
+    this.day = "";
   }
 
   componentWillReceiveProps(nextProps) {
@@ -71,18 +74,18 @@ class SessionForm extends React.Component {
             <span>To sign up, you must be 18 or older. Other people won't see your birthday.</span>
             <select>
               <option value="disabled">Month</option>
-              <option value="1">January</option>
-              <option value="2">February</option>
+              <option value={this.month}>January</option>
+              <option value={this.month}>February</option>
             </select>
             <select>
               <option value="disabled">Day</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
+              <option value={this.day}>1</option>
+              <option value={this.day}>2</option>
             </select>
             <select>
               <option value="disabled">Year</option>
-              <option value="2018">2018</option>
-              <option value="2017">2017</option>
+              <option value={this.year}>2018</option>
+              <option value={this.year}>2017</option>
             </select>
           </div>
         );
@@ -115,4 +118,4 @@ class SessionForm extends React.Component {
   }
 }
 
-export default SessionForm;
+export default withRouter(SessionForm);
