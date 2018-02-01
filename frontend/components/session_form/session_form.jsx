@@ -109,7 +109,7 @@ class SessionForm extends React.Component {
             { birthdayDiv() }
           <button type="submit">Submit</button>
         </form>
-        <h3>{statement}{this.navLink()}</h3>
+        <h3>{statement} {this.navLink()}</h3>
       </div>
     );
   }
