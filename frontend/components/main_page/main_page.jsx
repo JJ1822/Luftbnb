@@ -6,6 +6,26 @@ class MainPage extends React.Component {
     super(props);
   }
 
+  loginLink() {
+    if(this.props.currentUser) {
+      return (
+        <div className="header-list">
+          <div className="link-item"><Link to="">Become a host</Link></div>
+          <div className="link-item"><Link to="/">Trips</Link></div>
+          <div className="link-item"><Link onClick={this.props.logout} to="/">Log out</Link></div>
+        </div>
+      );
+    } else {
+      return (
+        <div className="header-list">
+          <div className="link-item"><Link to="">Become a host</Link></div>
+          <div className="link-item"><Link to="/signup">Sign up</Link></div>
+          <div className="link-item"><Link to="/login">Log In</Link></div>
+        </div>
+        );
+      }
+  }
+
   render() {
 
       return(
@@ -15,13 +35,8 @@ class MainPage extends React.Component {
             <h1 className="header-logo">
               <img src={window.staticImages.headerImage}></img>
             </h1>
-
-            <button onClick={this.props.logout}>Logout</button>
-            <div className="header-list">
-              <div className="link-item"><Link to="">Become a host</Link></div>
-              <div className="link-item"><Link to="/signup">Sign up</Link></div>
-              <div className="link-item"><Link to="/login">Log In</Link></div>
-            </div>
+            
+            {this.loginLink()}
           </nav>
         </header>
 
