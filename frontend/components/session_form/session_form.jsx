@@ -9,19 +9,18 @@ const customStyles = {
       left: 0,
       right: 0,
       bottom: 0,
-      backgroundColor: 'rgba(255, 255, 255, 0.75)'
+      backgroundColor: 'rgba(0, 0, 0, 0.7)'
     },
     content: {
       position: 'absolute',
-      top: '40px',
-      left: '40px',
-      right: '40px',
-      bottom: '40px',
+      top: '60px',
+      left: '465px',
+      right: '465px',
+      bottom: '110px',
       border: '1px solid #ccc',
       background: '#fff',
       overflow: 'auto',
       WebkitOverflowScrolling: 'touch',
-      borderRadius: '4px',
       outline: 'none',
       padding: '20px'
     }
@@ -86,6 +85,7 @@ class SessionForm extends React.Component {
 
   closeModal() {
     this.setState({modalIsOpen: false});
+    this.props.history.push('/');
   }
 
   // afterOpenModal() {
@@ -95,6 +95,8 @@ class SessionForm extends React.Component {
   render() {
     let statement = this.props.formType === 'signup' ? 'Already have a Luftbnb account?' : "Don't have an account?";
     let header = this.props.formType === 'signup' ? 'Sign up' : 'Log in to continue';
+    console.log(customStyles.content.bottom);
+    customStyles.content.bottom = this.props.formType === 'signup' ? '110px' : '375px';
     let nameDiv = () => { if(this.props.formType === 'signup') {
       return (
           <div className="name">
@@ -117,9 +119,10 @@ class SessionForm extends React.Component {
 
     let birthdayDiv = () => { if(this.props.formType === 'signup') {
       return (
-          <div className="birthday">
-            <span>Birthday</span>
-            <span>To sign up, you must be 18 or older. Other people won't see your birthday.</span>
+          <div className="birthday-div">
+            <span className="birthday">Birthday</span>
+            <span className="birthday-text">To sign up, you must be 18 or older. Other people won't see your birthday.</span>
+          <div className="bday">
             <select>
               <option value="disabled">Month</option>
               <option value={this.month}>January</option>
@@ -136,6 +139,7 @@ class SessionForm extends React.Component {
               <option value={this.year}>2017</option>
             </select>
           </div>
+          </div>
         );
       } else return null;
     };
@@ -150,8 +154,9 @@ class SessionForm extends React.Component {
           className="modal"
         >
 
-        <h1>{header}</h1>
+        <h1 className="login-header">{header}</h1>
         <form className="login-form" onSubmit={this.handleSubmit}>
+          <span onClick={this.closeModal} className="modal-close">&times;</span>
           <input
             type="email"
             placeholder="Email address"
@@ -168,7 +173,7 @@ class SessionForm extends React.Component {
             { birthdayDiv() }
           <button type="submit">Submit</button>
         </form>
-        <h3>{statement} {this.navLink()}</h3>
+        <h3 className="login-footer">{statement} {this.navLink()}</h3>
         </Modal>
       </div>
     );

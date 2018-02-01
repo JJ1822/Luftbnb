@@ -1,0 +1,117 @@
+.login-form input {
+  display: block;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: calc(100% - 22px);
+  font-family: 'Quicksand', sans-serif;
+  font-size: 19px;
+  font-style: bold;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+
+.login-form input:focus {
+  border: 1px solid #008489;
+}
+
+
+.login-form {
+  margin: 0 10px 20px 10px;
+  display: block;
+}
+
+.modal {
+  border-radius: 2px;
+}
+
+.birthday-div {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.login-header {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 24px;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 10px;
+  font-weight: bolder;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+
+.birthday {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.birthday-text {
+  font-family: 'Quicksand', sans-serif;
+  margin-bottom: 15px;
+  text-transform: full-width;
+  /*text-align: center;*/
+}
+
+.bday {
+  display: flex;
+  margin-bottom: 20px;
+}
+.bday select{
+   -webkit-appearance: button;
+   -webkit-border-radius: 2px;
+   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+   -webkit-padding-end: 20px;
+   -webkit-padding-start: 2px;
+   -webkit-user-select: none;
+   background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+   background-position: 93% center;
+   background-repeat: no-repeat;
+   border: 1px solid #AAA;
+   color: #555;
+   font-size: inherit;
+   overflow: hidden;
+   padding: 5px 10px;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   width: 300px;
+   height: 33px;
+   margin-right: 20px;
+}
+
+.bday select:last-child {
+  margin-right: 0px;
+}
+
+.login-form button {
+  width: 100%;
+  height: 40px;
+  background-color: #FF5A5F;
+  text-align: center;
+  color: white;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.login-footer {
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+}
+.login-footer a {
+  color: #008489;
+  margin-left: 5px;
+}
+.login-footer a:hover {
+  border-bottom: 1px solid #008489;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  font-size: 30px;
+  cursor: pointer;
+  line-height: 1;
+  font-weight: 300;
+}
