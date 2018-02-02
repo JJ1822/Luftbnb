@@ -38,7 +38,7 @@ class SessionForm extends React.Component {
     };
 
 
-
+    this.demoUser = this.demoUser.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
 
     this.year = "";
@@ -77,10 +77,13 @@ class SessionForm extends React.Component {
     this.props.processForm(user);
   }
 
-  // demoUser(e, field) {
-  //   e.preventDefault();
-  //   this.update(field);
-  // }
+
+  demoUser(e) {
+    e.preventDefault();
+    const demo = Object.assign({}, { email: "ILovetoCreateCoolStuff@gmail.com", first_name: "IamAHardWorker", password: "password" });
+    this.props.processForm(demo);
+
+  }
 
   openModal() {
     this.setState({modalIsOpen: true});
@@ -95,7 +98,7 @@ class SessionForm extends React.Component {
   renderErrors() {
       return (
         <ul className="login-errors" >
-          {this.props.errors.map((error, i) => (
+          {this.props.errors && this.props.errors.map((error, i) => (
             <li key={`error-${i}`}>{error}</li>
           ))}
         </ul>
@@ -109,7 +112,13 @@ class SessionForm extends React.Component {
   render() {
     let statement = this.props.formType === 'signup' ? 'Already have a Luftbnb account?' : "Don't have an account?";
     let header = this.props.formType === 'signup' ? 'Sign up' : 'Log in to continue';
-    customStyles.content.height = this.props.formType === 'signup' ? '580px' : '320px';
+    customStyles.content.height = this.props.formType === 'signup' ? '580px' : '380px';
+    let demo = () => { if(this.props.formType === 'login') {
+      return (
+          <button onClick={this.demoUser} >Demo</button>
+        );
+      }
+    };
     let nameDiv = () => { if(this.props.formType === 'signup') {
       return (
           <div className="name">
@@ -186,6 +195,7 @@ class SessionForm extends React.Component {
               />
             { birthdayDiv() }
           <button type="submit">Submit</button>
+          { demo() }
         </form>
         <h3 className="login-footer">{statement} {this.navLink()}</h3>
         </Modal>
