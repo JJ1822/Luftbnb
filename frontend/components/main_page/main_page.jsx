@@ -1,9 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Modal from 'react-modal';
 
 class MainPage extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      modalIsOpen: false
+    };
+    this.openModal = this.openModal.bind(this);
   }
 
   loginLink() {
@@ -19,11 +24,15 @@ class MainPage extends React.Component {
       return (
         <div className="header-list">
           <div className="link-item"><Link to="">Become a host</Link></div>
-          <div className="link-item"><Link to="/signup">Sign up</Link></div>
-          <div className="link-item"><Link to="/login">Log In</Link></div>
+          <div className="link-item"><Link onClick={this.openModal} to="/signup">Sign up</Link></div>
+          <div className="link-item"><Link onClick={this.openModal} to="/login">Log In</Link></div>
         </div>
         );
       }
+  }
+
+  openModal() {
+    this.setState({modalIsOpen: true});
   }
 
   render() {
@@ -35,7 +44,7 @@ class MainPage extends React.Component {
             <h1 className="header-logo">
               <img src={window.staticImages.headerImage}></img>
             </h1>
-            
+
             {this.loginLink()}
           </nav>
         </header>

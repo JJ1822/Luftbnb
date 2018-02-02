@@ -14,9 +14,8 @@ const customStyles = {
     content: {
       position: 'absolute',
       top: '60px',
-      left: '465px',
-      right: '465px',
-      bottom: '110px',
+      height: '580px',
+      width: '510px',
       border: '1px solid #ccc',
       background: '#fff',
       overflow: 'auto',
@@ -39,6 +38,7 @@ class SessionForm extends React.Component {
     };
 
 
+
     this.handleSubmit = this.handleSubmit.bind(this);
 
     this.year = "";
@@ -49,9 +49,7 @@ class SessionForm extends React.Component {
     this.closeModal = this.closeModal.bind(this);
   }
 
-  componentDidMount() {
 
-  }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.loggedIn) {
@@ -67,9 +65,9 @@ class SessionForm extends React.Component {
 
   navLink() {
     if (this.props.formType === 'login') {
-      return <Link to="/signup">Sign up</Link>;
+      return <Link onClick={this.closeModal} to="/signup">Sign up</Link>;
     } else {
-      return <Link to="/login">Log in</Link>;
+      return <Link onClick={this.closeModal} to="/login">Log in</Link>;
     }
   }
 
@@ -79,6 +77,11 @@ class SessionForm extends React.Component {
     this.props.processForm(user);
   }
 
+  // demoUser(e, field) {
+  //   e.preventDefault();
+  //   this.update(field);
+  // }
+
   openModal() {
     this.setState({modalIsOpen: true});
   }
@@ -86,6 +89,17 @@ class SessionForm extends React.Component {
   closeModal() {
     this.setState({modalIsOpen: false});
     this.props.history.push('/');
+    this.props.clearErrors();
+  }
+
+  renderErrors() {
+      return (
+        <ul className="login-errors" >
+          {this.props.errors.map((error, i) => (
+            <li key={`error-${i}`}>{error}</li>
+          ))}
+        </ul>
+      );
   }
 
   // afterOpenModal() {
@@ -95,8 +109,7 @@ class SessionForm extends React.Component {
   render() {
     let statement = this.props.formType === 'signup' ? 'Already have a Luftbnb account?' : "Don't have an account?";
     let header = this.props.formType === 'signup' ? 'Sign up' : 'Log in to continue';
-    console.log(customStyles.content.bottom);
-    customStyles.content.bottom = this.props.formType === 'signup' ? '110px' : '375px';
+    customStyles.content.height = this.props.formType === 'signup' ? '580px' : '320px';
     let nameDiv = () => { if(this.props.formType === 'signup') {
       return (
           <div className="name">
@@ -157,6 +170,7 @@ class SessionForm extends React.Component {
         <h1 className="login-header">{header}</h1>
         <form className="login-form" onSubmit={this.handleSubmit}>
           <span onClick={this.closeModal} className="modal-close">&times;</span>
+          {this.renderErrors()}
           <input
             type="email"
             placeholder="Email address"
