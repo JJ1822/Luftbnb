@@ -1,0 +1,18 @@
+class CreateSpots < ActiveRecord::Migration[5.1]
+  def change
+    create_table :spots do |t|
+      t.float :latitude, null: false
+      t.float :longitude, null: false
+      t.string :room_type, null: false
+      t.integer :price_per_day, null: false
+      t.string :description, null: false
+      t.string :amenities, null: false
+      t.integer :num_guests, null: false
+      t.integer :num_beds, null: false
+      t.integer :num_rooms, null: false
+      t.string :img_url, null: false
+
+      t.timestamps
+    end
+  end
+end
