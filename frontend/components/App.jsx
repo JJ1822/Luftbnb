@@ -3,6 +3,7 @@ import {Route} from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
 import MainPageContainer from './main_page/main_page_container';
 import SessionFormContainer from './session_form/session_form_container';
+import SpotIndexContainer from './spot/spot_index_container';
 
 const App = () => (
   <div>
@@ -11,6 +12,7 @@ const App = () => (
     </header>
     <AuthRoute path="/login" component={SessionFormContainer} />
     <AuthRoute path="/signup" component={SessionFormContainer} />
+    // <Route exact path="/" component={ SpotIndexContainer } />
   </div>
 );
 
