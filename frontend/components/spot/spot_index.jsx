@@ -1,4 +1,5 @@
 import React from 'react';
+import SpotIndexItem from './spot_index_item';
 
 class SpotIndex extends React.Component {
 
@@ -7,8 +8,10 @@ class SpotIndex extends React.Component {
   }
 
   render() {
+
     const { spots } = this.props;
-    const spotItem = spots.map(spot => <li>{spot.room_type}</li>);
+    debugger
+    const spotItem = spots.map(spot => <SpotIndexItem key={spot.id} spot={spot} />);
     return (
       <ul>
         {spotItem}
@@ -16,3 +19,5 @@ class SpotIndex extends React.Component {
     );
   }
 }
+
+export default SpotIndex;

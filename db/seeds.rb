@@ -13,6 +13,31 @@ Spot.create!(latitude: 37.780092, longitude: -122.412064,
              room_type: "entire home", price_per_day: 110,
              description: "this is a description", amenities: "wifi",
              num_guests: 4, num_beds: 2, num_rooms: 2,
-             img_url: "https://goo.gl/tvktRg")
+             img_url: "https://www.sothebysrealty.com/extraordinary-living-blog/wp-content/uploads/2013/07/san-fran1.jpg")
+Spot.create!(latitude: 37.780092, longitude: -122.412064,
+             room_type: "entire home", price_per_day: 110,
+             description: "this is a description", amenities: "wifi",
+             num_guests: 4, num_beds: 2, num_rooms: 2,
+             img_url: "https://www.sothebysrealty.com/extraordinary-living-blog/wp-content/uploads/2013/07/san-fran1.jpg")
+Spot.create!(latitude: 37.780092, longitude: -122.412064,
+             room_type: "entire home", price_per_day: 110,
+             description: "this is a description", amenities: "wifi",
+             num_guests: 4, num_beds: 2, num_rooms: 2,
+             img_url: "https://www.sothebysrealty.com/extraordinary-living-blog/wp-content/uploads/2013/07/san-fran1.jpg")
+Spot.create!(latitude: 37.780092, longitude: -122.412064,
+             room_type: "entire home", price_per_day: 110,
+             description: "this is a description", amenities: "wifi",
+             num_guests: 4, num_beds: 2, num_rooms: 2,
+             img_url: "https://www.sothebysrealty.com/extraordinary-living-blog/wp-content/uploads/2013/07/san-fran1.jpg")
+Spot.create!(latitude: 37.780092, longitude: -122.412064,
+             room_type: "entire home", price_per_day: 110,
+             description: "this is a description", amenities: "wifi",
+             num_guests: 4, num_beds: 2, num_rooms: 2,
+             img_url: "https://www.sothebysrealty.com/extraordinary-living-blog/wp-content/uploads/2013/07/san-fran1.jpg")
+Spot.create!(latitude: 37.780092, longitude: -122.412064,
+             room_type: "entire home", price_per_day: 110,
+             description: "this is a description", amenities: "wifi",
+             num_guests: 4, num_beds: 2, num_rooms: 2,
+             img_url: "https://www.sothebysrealty.com/extraordinary-living-blog/wp-content/uploads/2013/07/san-fran1.jpg")
 
 User.create!(email: "ILovetoCreateCoolStuff@gmail.com", first_name: "IamAHardWorker", password: "password")
