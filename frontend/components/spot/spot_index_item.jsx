@@ -2,9 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const SpotIndexItem = ({ spot }) => {
+  console.log(spot);
   return (
     <div className="spot-index-item">
-        <img clasName="spot-index-image" src={spot.img_url}/>
+        <img className="spot-index-image" src={spot.img_url}/>
       <div className="spot-index-type">
         <span>{spot.room_type}</span>
         <span>{spot.num_beds}</span>
