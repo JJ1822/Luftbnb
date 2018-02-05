@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const SpotIndexItem = ({ spot }) => {
-  console.log(spot);
   return (
     <div className="spot-index-item">
         <img className="spot-index-image" src={spot.img_url}/>
