@@ -3,7 +3,9 @@
   <head>
     <title>Luftbnb</title>
     <%= csrf_meta_tags %>
-    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV["google_maps_key"]} " %>
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDPEyFkeT7R4KoktbXcnP8EfAYW41zGp8&callback=initMap"
+  type="text/javascript"></script> -->
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyCDPEyFkeT7R4KoktbXcnP8EfAYW41zGp8" %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
