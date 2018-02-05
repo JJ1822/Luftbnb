@@ -14,12 +14,24 @@ export default class MarkerManager {
   }
 
   createMarkerFromSpot(spot) {
-    const position = new google.maps.LatLng( spot.latitude, spot.longitude);
+    let { id, latitude, longitude, price_per_day } = spot;
+    const position = new google.maps.LatLng( latitude, longitude);
     const marker = new google.maps.Marker({
       position,
       map: this.map,
-      spotId: spot.id
+      spotId: id,
+      animation: google.maps.Animation.DROP
     });
+
+    // let infoWindow = new google.maps.InfoWindow({
+    //   content: content
+    // });
+    //
+    // marker.addListener('click', () => {
+    //   infoWindow.open(this.map, marker);
+    // });
+
+
   }
 
   removeMarker(marker) {

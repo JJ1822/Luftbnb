@@ -12,7 +12,7 @@ const App = () => (
     </header>
     <AuthRoute path="/login" component={SessionFormContainer} />
     <AuthRoute path="/signup" component={SessionFormContainer} />
-    <Route exact path="/" component={ SpotSearchContainer } />
+    <Route exact path="/spots" component={ SpotSearchContainer } />
   </div>
 );
 
