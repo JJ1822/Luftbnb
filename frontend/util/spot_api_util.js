@@ -1,9 +1,9 @@
-export const fetchSpots = (bounds) => {
+export const fetchSpots = (data) => {
   return (
     $.ajax({
       method: 'GET',
       url: 'api/spots',
-      data: bounds
+      data
     })
   );
 };

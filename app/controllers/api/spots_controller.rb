@@ -3,7 +3,7 @@ class Api::SpotsController < ApplicationController
   before_action :require_user
 
   def index
-    @spots = Spot.in_bounds(params[:bounds])
+    @spots = Spot.all
     render :index
   end
 
