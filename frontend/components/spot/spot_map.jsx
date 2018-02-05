@@ -18,6 +18,17 @@ class SpotMap extends React.Component {
     this.MarkerManager.updateMarkers(this.props.spots);
   }
 
+  registerListeners() {
+    google.maps.event.addListener(this.map, 'idle', () => {
+      const { north, south, east, west } = this.map.getBounds().toJSON();
+      const bounds = {
+        northEast: { latitude: north, longitude: east },
+        southWest: { latitude: south, longitude: west }
+      };
+      this.props.updateBounds(bounds);
+    });
+  }
+
   render() {
     return (
       <div className="map-container" ref={ map => this.mapNode = map }>
