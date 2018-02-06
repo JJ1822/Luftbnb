@@ -15,7 +15,7 @@ class MainPage extends React.Component {
     if(this.props.currentUser) {
       return (
         <div className="header-list">
-          <div className="link-item"><Link to="">Become a host</Link></div>
+          <div className="link-item"><Link to="/host">Become a host</Link></div>
           <div className="link-item"><Link to="/">Trips</Link></div>
           <div className="link-item"><Link onClick={this.props.logout} to="/">Log out</Link></div>
         </div>

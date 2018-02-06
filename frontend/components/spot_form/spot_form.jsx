@@ -1,5 +1,6 @@
 import React from 'react';
 import SpotAutocomplete from '../spot_autocomplete/spot_autocomplete';
+import SpotIndexItem from './spot_form_item';
 
 class SpotForm extends React.Component {
   constructor(props) {
@@ -9,13 +10,15 @@ class SpotForm extends React.Component {
       longitude: "",
       room_type: "",
       price_per_day: "",
+      name: "",
       description: "",
       amenities: "",
       num_guests: "",
       num_beds: "",
       num_bedrooms: "",
       img_url: "",
-      user_id: ""
+      author_id: "",
+      num_bathrooms: ""
     };
   }
 
@@ -42,6 +45,7 @@ class SpotForm extends React.Component {
           <span>Hi, name! Let's list your space.</span>
           <h3>Where's your place located?</h3>
           <SpotAutocomplete />
+          <SpotIndexItem />
         </div>
       </div>
     );

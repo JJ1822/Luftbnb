@@ -6,11 +6,14 @@ class CreateSpots < ActiveRecord::Migration[5.1]
       t.string :room_type, null: false
       t.integer :price_per_day, null: false
       t.string :description, null: false
-      t.string :amenities, null: false
-      t.integer :num_guests, null: false
-      t.integer :num_beds, null: false
-      t.integer :num_rooms, null: false
-      t.string :img_url, null: false
+      t.string :amenities, default: [], array: true
+      t.string :num_guests, null: false
+      t.string :num_beds, null: false
+      t.string :num_bedrooms, null: false
+      t.string :img_url
+      t.string :name, null: false
+      t.integer :author_id, null: false
+      t.string :num_bathrooms
 
       t.timestamps
     end

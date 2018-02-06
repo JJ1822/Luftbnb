@@ -1,7 +1,7 @@
 class Spot < ApplicationRecord
   validates :latitude, :longitude, :room_type, :price_per_day,
-            :description, :amenities, :num_guests, :num_beds, :num_rooms,
-            :img_url, presence: true
+            :description, :num_guests, :num_beds, :num_bedrooms,
+            :name, :author_id, presence: true
 
   def self.in_bounds(bounds)
     self.where("latitude < ?", bounds[:northEast][:latitude])

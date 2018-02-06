@@ -8,6 +8,15 @@ export const fetchSpots = (data) => {
   );
 };
 
+export const fetchSpot = (id) => {
+  return (
+    $.ajax({
+      method: 'GET',
+      url: `api/spots/${id}`
+    })
+  );
+};
+
 export const createSpot = (spot) => {
   return (
     $.ajax({
