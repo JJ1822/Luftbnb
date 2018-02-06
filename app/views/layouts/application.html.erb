@@ -5,7 +5,7 @@
     <%= csrf_meta_tags %>
     <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDPEyFkeT7R4KoktbXcnP8EfAYW41zGp8&callback=initMap"
   type="text/javascript"></script> -->
-    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=AIzaSyCDPEyFkeT7R4KoktbXcnP8EfAYW41zGp8&libraries=places" %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=ENV#{GOOGLE_API_KEY}" %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
