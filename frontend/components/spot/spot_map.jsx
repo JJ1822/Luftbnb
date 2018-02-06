@@ -13,8 +13,8 @@ class SpotMap extends React.Component {
     console.log(this.map);
      this.MarkerManager = new MarkerManager(this.map);
      this.registerListeners();
-     this.MarkerManager.updateMarkers(this.props.spots);
   }
+  // this.MarkerManager.updateMarkers(this.props.spots);
 
   componentDidUpdate() {
     this.MarkerManager.updateMarkers(this.props.spots);

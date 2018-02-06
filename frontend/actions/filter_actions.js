@@ -9,6 +9,5 @@ export const changeBounds= (bounds) => ({
 
 export const updateBounds = (bounds) => (dispatch, getState) => {
   dispatch(changeBounds(bounds));
-  console.log(getState().ui.filters);
-  return dispatch(fetchSpots());
+  return dispatch(fetchSpots(getState().ui.filters));
 };

@@ -7,6 +7,6 @@ const receiveAllSpots = (spots) => ({
   spots
 });
 
-export const fetchSpots = () => (dispatch) => {
-  SpotApi.fetchSpots().then(spots => dispatch(receiveAllSpots(spots)));
+export const fetchSpots = (bounds) => (dispatch) => {
+  SpotApi.fetchSpots(bounds).then(spots => dispatch(receiveAllSpots(spots)));
 };
