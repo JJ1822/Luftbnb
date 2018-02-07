@@ -11,7 +11,6 @@ class SpotMap extends React.Component {
   componentDidMount() {
 
     this.map = new google.maps.Map(this.refs.map, mapOptions);
-    console.log(this.map);
      this.MarkerManager = new MarkerManager(this.map);
      this.registerListeners();
   }
@@ -38,7 +37,6 @@ class SpotMap extends React.Component {
   }
 
   render() {
-    console.log("I'm loading the map!");
     return (
       <div className="map-container" ref="map">
         Map

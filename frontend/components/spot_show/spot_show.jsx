@@ -8,7 +8,6 @@ class SpotShow extends React.Component {
     }
   }
   render() {
-    console.log(this.props);
 
     const { spot, spotId, fetchSpot } = this.props;
     if(!spot) {
