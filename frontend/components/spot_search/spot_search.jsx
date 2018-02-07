@@ -4,18 +4,25 @@ import SpotIndex from './spot_index';
 
 class SpotSearch extends React.Component {
 
+
+
   render() {
-    const {spots, fetchSpots, updateBounds } = this.props;
+    const {spots, bounds, fetchSpots, updateBounds } = this.props;
     return (
       <div>
-        <SpotMap
-          spots={spots}
-          updateBounds={updateBounds}
+
+          <SpotIndex
+            spots={spots}
+            bounds={bounds}
+            updateBounds={updateBounds}
+            />
+
+
+          <SpotMap
+            spots={spots}
+            updateBounds={updateBounds}
           />
-        <SpotIndex
-          spots={spots}
-          fetchSpots={fetchSpots}
-          />
+
       </div>
     );
   }

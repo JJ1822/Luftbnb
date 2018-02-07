@@ -32,6 +32,7 @@ class SpotMap extends React.Component {
   }
 
   render() {
+    console.log("I'm loading the map!");
     return (
       <div className="map-container" ref={ map => this.mapNode = map }>
 

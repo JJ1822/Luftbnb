@@ -1,0 +1,73 @@
+.spot-index-item {
+  display: block;
+  height: 350px;
+  width: 30%;
+  float: left;
+  margin: 7px;
+  padding: 3px;
+}
+
+.spot-index-container {
+  width: 1250px;
+  display: flex;
+}
+
+.map-container {
+  z-index: 1;
+  position: fixed !important;
+  width: 725px !important;
+  height: 500px;
+  right: 0px;
+  top: 85px;
+}
+
+.spot-index-image {
+  border-radius: 3px;
+  display: block;
+  height: 280px;
+}
+
+.spot-index-type span {
+  color: rgb(155, 49, 67);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-right: 5px;
+  letter-spacing: .2px;
+  height: 15px;
+  width: 10px;
+  padding-top: 5px;
+}
+
+
+
+.dot {
+  font-size: 12px;
+  font-weight: 700px;
+  height: 15px;
+  text-align: center;
+  padding-left: 5px;
+}
+
+.spot-index-type {
+  display: block;
+  padding: 5px 0;
+}
+
+.spot-index-name {
+  font-size: 19px;
+  color: #484848;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+
+.spot-index-rating  span {
+  font-size: 15px;
+  letter-spacing: .2px;
+  color: #484848;
+  font-weight: 300;
+}
+
+.spot-index-rating {
+  margin-top: 5px;
+}
