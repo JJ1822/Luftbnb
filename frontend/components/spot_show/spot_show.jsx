@@ -1,7 +1,6 @@
 import React from 'react';
 
 const SpotShow = ({ spot, spotId, fetchSpot }) => {
-  debugger
 
 
   return (
