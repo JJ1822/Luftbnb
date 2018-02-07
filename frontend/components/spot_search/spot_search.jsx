@@ -10,7 +10,7 @@ class SpotSearch extends React.Component {
     const {spots, bounds, fetchSpots, updateBounds } = this.props;
     return (
       <div>
-
+        <div className="spot-index-container">
           <SpotIndex
             spots={spots}
             bounds={bounds}
@@ -22,7 +22,7 @@ class SpotSearch extends React.Component {
             spots={spots}
             updateBounds={updateBounds}
           />
-
+        </div>
       </div>
     );
   }

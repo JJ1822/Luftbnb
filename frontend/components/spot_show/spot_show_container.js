@@ -5,7 +5,7 @@ import SpotShow from './spot_show';
 const mapStateToProps = (state, { match }) => {
 
   const spotId = parseInt(match.params.spotId);
-  const spot = state.entities.spots[spotId] || {};
+  const spot = state.entities.spots[spotId];
   return {
     spotId,
     spot

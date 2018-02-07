@@ -36,8 +36,9 @@ class MainPage extends React.Component {
   }
 
   render() {
-
       return(
+
+      <div className="freeze">
         <header className="header">
           <nav className="header-nav">
 
@@ -48,6 +49,7 @@ class MainPage extends React.Component {
             {this.loginLink()}
           </nav>
         </header>
+      </div>
 
     );
   }

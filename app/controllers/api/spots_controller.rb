@@ -7,6 +7,15 @@ class Api::SpotsController < ApplicationController
     render :index
   end
 
+  def show
+    @spot = Spot.find(params[:id])
+    if @spot
+      render :show
+    else
+      render json: ["This isn't the location you are looking for"], status: 404
+    end
+  end
+
   def create
     @spot = Spot.new(spot_params)
     if @spot.save

@@ -7,7 +7,7 @@ const spotReducer = (state = {}, action) => {
     case RECEIVE_ALL_SPOTS:
       return action.spots;
     case RECEIVE_SINGLE_SPOT:
-      let spot = action.payload.spot;
+      let spot = action.payload;
       return merge({}, state, { [spot.id]: spot});
     default:
       return state;

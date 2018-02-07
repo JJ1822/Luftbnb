@@ -13,8 +13,3 @@
  *= require_tree .
  *= require_self
  */
-.map-container {
-  height: 1000px;
-  width: 1000px;
-  position: fixed;
-}

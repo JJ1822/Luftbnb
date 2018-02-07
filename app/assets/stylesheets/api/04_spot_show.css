@@ -1,0 +1,82 @@
+.spot-show {
+  grid-row: 1;
+  grid-column: 1/5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.spot-grid {
+display: grid;
+grid-template-columns: 2fr 40vw 24rem 1fr;
+grid-template-rows: 75vh 2rem 1fr;
+grid-column-gap: 4rem;
+}
+
+.spot-show img {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.show-heading {
+  grid-row: 3;
+  grid-column: 2/3;
+  padding-right: 15px;
+  padding-bottom: 40px;
+}
+
+.show-heading span {
+  color: rgb(78, 65, 38);
+  font-size: 12px;
+  letter-spacing: .2px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.show-heading h1 {
+  font-weight: 700;
+  font-size: 36px;
+  color: #484848;
+  line-height: 40px;
+  letter-spacing: -.6px;
+  padding-top: 5px;
+}
+
+.show-details {
+  padding: 15px 0;
+}
+
+.show-details span {
+  text-transform: lowercase;
+  font-weight: 300;
+  font-size: 17px;
+  color: #484848;
+  letter-spacing: .2px;
+  margin-right: 26px;
+}
+
+.show-description h3 {
+  color: #484848;
+  font-size: 17px;
+  letter-spacing: .2px;
+  font-weight: 700;
+}
+.show-description p {
+  color: #484848;
+  font-size: 17px;
+  letter-spacing: .2px;
+  font-weight: 300;
+}
+
+.show-amentities li {
+  margin-right: 15px;
+  font-size: 15px !important;
+  letter-spacing: .2px !important;
+  text-transform: capitalize !important;
+  color: #484848 !important;
+  font-weight: 300 !important;
+  list-style: none;
+  display: inline-block;
+}

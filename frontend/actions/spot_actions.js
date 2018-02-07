@@ -20,7 +20,7 @@ export const fetchSpots = (bounds) => (dispatch) => {
 };
 
 export const fetchSpot = (id) => (dispatch) => {
-  SpotApi.fetchSpots(id).then(spot => dispatch(receiveSingleSpot(spot)));
+  SpotApi.fetchSpot(id).then(spot => dispatch(receiveSingleSpot(spot)));
 };
 
 export const createSpot = (formSpot) => (dispatch) => (

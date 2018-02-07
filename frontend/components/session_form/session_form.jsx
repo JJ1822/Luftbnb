@@ -146,17 +146,17 @@ class SessionForm extends React.Component {
             <span className="birthday-text">To sign up, you must be 18 or older. Other people won't see your birthday.</span>
           <div className="bday">
             <select>
-              <option value="disabled">Month</option>
+              <option disabled selected>Month</option>
               <option value={this.month}>January</option>
               <option value={this.month}>February</option>
             </select>
             <select>
-              <option value="disabled">Day</option>
+              <option disabled selected="disabled">Day</option>
               <option value={this.day}>1</option>
               <option value={this.day}>2</option>
             </select>
             <select>
-              <option value="disabled">Year</option>
+              <option disabled selected="disabled">Year</option>
               <option value={this.year}>2018</option>
               <option value={this.year}>2017</option>
             </select>
