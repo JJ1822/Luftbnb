@@ -36,7 +36,21 @@ class MainPage extends React.Component {
   }
 
   render() {
-      return(
+    const navButtons = () => {
+      if(this.props.currentUser && this.props.pathname === "/" ) {
+        return (
+                <Link className="loc-link" to="/spots">
+                  <div className="loc-button">
+                    <div className="photo"></div>
+                    <h1>San Francisco</h1>
+                  </div>
+                </Link>
+
+        );
+      }
+    };
+
+    return(
 
       <div className="freeze">
         <header className="header">
@@ -49,6 +63,10 @@ class MainPage extends React.Component {
             {this.loginLink()}
           </nav>
         </header>
+        <div className="navigation-div">
+
+          {navButtons()}
+        </div>
       </div>
 
     );

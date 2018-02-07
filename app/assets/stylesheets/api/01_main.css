@@ -42,3 +42,43 @@ a:hover {
 .header-list {
   display: flex;
 }
+
+.navigation-div {
+  display: block;
+  padding-top: 20px;
+  padding-left: 20px;
+
+}
+
+.loc-button {
+  display: flex;
+  height: 200px;
+  width: 30%;
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+  margin: 20px;
+  border: solid 1px #e4e4e4;
+  overflow: hidden;
+}
+
+.photo {
+  background-image: url(https://cdn.stocksnap.io/img-thumbs/960w/869E10A625.jpg);
+  background-size: cover;
+  height: 100%;
+  width: 52%;
+}
+
+.loc-button h1{
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: .2px;
+  text-transform: uppercase;
+  color: #484848;
+  padding: 10px 0;
+  margin-left: 69px;
+}
+
+.loc-link {
+  width: 20%;
+}

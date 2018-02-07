@@ -10,7 +10,7 @@ import SpotShowContainer from './spot_show/spot_show_container';
 const App = () => (
   <div>
     <header>
-      <MainPageContainer />
+      <Route path="/" component={ MainPageContainer } />
     </header>
     <AuthRoute path="/login" component={SessionFormContainer} />
     <AuthRoute path="/signup" component={SessionFormContainer} />
