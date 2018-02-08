@@ -34,7 +34,7 @@ body {
 
 }
 
-a:hover {
+.link-item a:hover {
   border-bottom: 2px solid black;
 }
 
@@ -52,14 +52,15 @@ a:hover {
 
 .loc-button {
   display: flex;
-  height: 200px;
-  width: 30%;
+  height: 150px;
+  width: 35%;
   border-radius: 5px;
-  text-align: center;
+  text-align: right;
   align-items: center;
   margin: 20px;
   border: solid 1px #e4e4e4;
   overflow: hidden;
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.06);
 }
 
 .photo {
@@ -67,16 +68,16 @@ a:hover {
   background-size: cover;
   height: 100%;
   width: 52%;
+  margin-right: 25px;
 }
 
 .loc-button h1{
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: .2px;
-  text-transform: uppercase;
   color: #484848;
-  padding: 10px 0;
-  margin-left: 69px;
+  padding: 10px 10px;
+
 }
 
 .loc-link {

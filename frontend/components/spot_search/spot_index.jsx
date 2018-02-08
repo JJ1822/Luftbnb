@@ -12,10 +12,11 @@ class SpotIndex extends React.Component {
     const { spots } = this.props;
     const spotItem = spots.map(spot => <SpotIndexItem key={spot.id} spot={spot} />);
     return (
-
-        <ul>
-          {spotItem}
-        </ul>
+        <div className="spot-item-grid">
+          <ul>
+            {spotItem}
+          </ul>
+        </div>
     );
   }
 }
