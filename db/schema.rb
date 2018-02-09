@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20180208190801) do
     t.string "body", null: false
     t.integer "rating", null: false
     t.integer "spot_id", null: false
-    t.integer "author_id", null: false
+    t.integer "author_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["spot_id"], name: "index_reviews_on_spot_id"
