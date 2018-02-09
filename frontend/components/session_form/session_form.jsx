@@ -13,7 +13,7 @@ const customStyles = {
     },
     content: {
       position: 'absolute',
-      top: '60px',
+      top: '130px',
       height: '580px',
       width: '510px',
       border: '1px solid #ccc',

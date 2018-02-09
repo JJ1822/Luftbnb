@@ -5,12 +5,11 @@ import ReviewDetail from './review_detail';
 class SpotShow extends React.Component {
 
   componentDidMount() {
-    if(!this.props.spot) {
       this.props.fetchSpot(parseInt(this.props.match.params.spotId));
-    }
+
   }
   render() {
-    debugger
+
     const { spot, spotId, fetchSpot } = this.props;
     if(!spot) {
       return null;
@@ -41,13 +40,12 @@ class SpotShow extends React.Component {
 
             </div>
           </div>
-          <ReviewFormContainer />
         </div>
       </div>
     );
   }
 }
+// <ReviewFormContainer />
+// <ReviewDetail reviews={this.props.reviews}/>
 
 export default SpotShow;
-
-// <ReviewDetail reviews={this.props}/>

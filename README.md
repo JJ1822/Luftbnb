@@ -5,3 +5,5 @@ while utilizing React/Redux on the frontend, and SASS to style.
 
 
 [Luftbnb live version](https://luftbnb.herokuapp.com/#/)
+
+![](https://giphy.com/gifs/3ohjV7W7zb1hyFx3Vu)

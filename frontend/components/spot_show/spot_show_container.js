@@ -5,10 +5,16 @@ import SpotShow from './spot_show';
 const mapStateToProps = (state, { match }) => {
   const spotId = parseInt(match.params.spotId);
   const spot = state.entities.spots[spotId];
-  const reviews = Object.values(state.entities.spots[spotId].reviews);
+  let reviews;
+  if (state.entities.spots[spotId] && state.entities.spots[spotId].reviews) {
+    reviews = Object.values(state.entities.spots[spotId].reviews);
+  } else {
+    reviews = [];
+  }
   return {
     spotId,
-    spot
+    spot,
+    reviews
   };
 };
 

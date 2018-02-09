@@ -49,7 +49,11 @@ class MainPage extends React.Component {
         );
       }
     };
-
+    const background = () => {
+      if(!this.props.currentUser) {
+        return <div className="background-pic"></div>;
+      }
+    };
     return(
 
       <div className="freeze">
@@ -57,7 +61,9 @@ class MainPage extends React.Component {
           <nav className="header-nav">
 
             <h1 className="header-logo">
-              <img src={window.staticImages.headerImage}></img>
+              <Link to="/">
+                <img src={window.staticImages.headerImage}></img>
+              </Link>
             </h1>
 
             {this.loginLink()}
@@ -67,7 +73,9 @@ class MainPage extends React.Component {
 
           {navButtons()}
         </div>
+        {background()}
       </div>
+
 
     );
   }

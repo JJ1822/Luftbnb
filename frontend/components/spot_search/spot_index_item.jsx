@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const SpotIndexItem = ({ spot }) => {
   return (
-    <Link to={`spots/${spot.id}`}>
+    <Link to={`/spots/${spot.id}`}>
       <div className="spot-index-item">
           <img className="spot-index-image" src={spot.img_url}/>
         <div className="spot-index-type">
@@ -11,7 +11,7 @@ const SpotIndexItem = ({ spot }) => {
 
         </div>
         <div className="spot-index-name">
-          <h2>Malibu Dream Airstream</h2>
+          <h2>{spot.name}</h2>
         </div>
         <div className="spot-index-rating">
           <span>From ${spot.price_per_day} per night</span>
