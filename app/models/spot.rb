@@ -3,6 +3,8 @@ class Spot < ApplicationRecord
             :description, :num_guests, :num_beds, :num_bedrooms,
             :name, :author_id, presence: true
 
+  has_many :reviews
+
   def self.in_bounds(bounds)
     self.where("latitude < ?", bounds[:northEast][:latitude])
       .where("latitude > ?", bounds[:southWest][:latitude])

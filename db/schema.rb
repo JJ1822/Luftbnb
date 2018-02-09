@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180202182416) do
+ActiveRecord::Schema.define(version: 20180208190801) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "reviews", force: :cascade do |t|
+    t.string "body", null: false
+    t.integer "rating", null: false
+    t.integer "spot_id", null: false
+    t.integer "author_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["spot_id"], name: "index_reviews_on_spot_id"
+  end
 
   create_table "spots", force: :cascade do |t|
     t.float "latitude", null: false
