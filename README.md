@@ -6,4 +6,4 @@ while utilizing React/Redux on the frontend, and SASS to style.
 
 [Luftbnb live version](https://luftbnb.herokuapp.com/#/)
 
-[](https://media.giphy.com/media/3ohjV7W7zb1hyFx3Vu/giphy.gif)
+![](https://media.giphy.com/media/3ohjV7W7zb1hyFx3Vu/giphy.gif)
