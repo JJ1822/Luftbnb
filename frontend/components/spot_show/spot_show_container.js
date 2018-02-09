@@ -3,9 +3,9 @@ import { fetchSpot } from '../../actions/spot_actions';
 import SpotShow from './spot_show';
 
 const mapStateToProps = (state, { match }) => {
-
   const spotId = parseInt(match.params.spotId);
   const spot = state.entities.spots[spotId];
+  const reviews = Object.values(state.entities.spots[spotId].reviews);
   return {
     spotId,
     spot

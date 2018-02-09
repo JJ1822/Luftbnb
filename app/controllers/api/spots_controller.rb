@@ -8,7 +8,7 @@ class Api::SpotsController < ApplicationController
   end
 
   def show
-    @spot = Spot.find(params[:id])
+    @spot = Spot.includes(:reviews).find(params[:id])
     if @spot
       render :show
     else

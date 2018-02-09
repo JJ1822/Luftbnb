@@ -9,11 +9,6 @@ const spotReducer = (state = {}, action) => {
     case RECEIVE_SINGLE_SPOT:
       let spot = action.payload;
       return merge({}, state, { [spot.id]: spot});
-    case RECEIVE_REVIEW:
-      let newState = merge({}, state);
-      const review = action.review;
-      newState[review.spot_id].reviews.push(review);
-      return newState;
     default:
       return state;
   }

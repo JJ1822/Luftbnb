@@ -1,4 +1,6 @@
 import React from 'react';
+import ReviewFormContainer from './review_container';
+import ReviewDetail from './review_detail';
 
 class SpotShow extends React.Component {
 
@@ -8,7 +10,7 @@ class SpotShow extends React.Component {
     }
   }
   render() {
-
+    debugger
     const { spot, spotId, fetchSpot } = this.props;
     if(!spot) {
       return null;
@@ -39,6 +41,7 @@ class SpotShow extends React.Component {
 
             </div>
           </div>
+          <ReviewFormContainer />
         </div>
       </div>
     );
@@ -46,3 +49,5 @@ class SpotShow extends React.Component {
 }
 
 export default SpotShow;
+
+// <ReviewDetail reviews={this.props}/>
