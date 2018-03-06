@@ -23,7 +23,6 @@ class MainPage extends React.Component {
     } else {
       return (
         <div className="header-list">
-          <div className="link-item"><Link to="">Become a host</Link></div>
           <div className="link-item"><Link onClick={this.openModal} to="/signup">Sign up</Link></div>
           <div className="link-item"><Link onClick={this.openModal} to="/login">Log In</Link></div>
         </div>
@@ -59,12 +58,18 @@ class MainPage extends React.Component {
       <div className="freeze">
         <header className="header">
           <nav className="header-nav">
-
-            <h1 className="header-logo">
+            <div>
+              <h1 className="header-logo">
               <Link to="/">
                 <img src={window.staticImages.headerImage}></img>
               </Link>
             </h1>
+            <div>
+              <span>Airbnb clone</span>
+              <br></br>
+              <span>  by Jay Johnson |</span>
+            </div>
+          </div>
 
             {this.loginLink()}
           </nav>

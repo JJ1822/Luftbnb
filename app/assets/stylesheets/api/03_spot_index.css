@@ -8,7 +8,7 @@
 .spot-item-grid ul {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   width: 95%;
 
 }
@@ -16,7 +16,7 @@
 .spot-index-item {
   display: flex;
   flex-flow: column nowrap;
-  height: 350px;
+  height: 100%;
   max-width: 375px;
   min-width: 300px;
   margin: 7px;
@@ -32,7 +32,7 @@
 .map-container {
   z-index: 1;
   position: fixed !important;
-  width: 37% !important;
+  width: 43% !important;
   height: 89.5%;
   right: 0px;
   top: 85px;
