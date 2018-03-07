@@ -38,6 +38,8 @@ class MainPage extends React.Component {
     const navButtons = () => {
       if(this.props.currentUser && this.props.pathname === "/" ) {
         return (
+              <div>
+
                 <Link className="loc-link" to="/spots">
                   <div className="loc-button">
                     <div className="photo"></div>
@@ -45,6 +47,42 @@ class MainPage extends React.Component {
                   </div>
                 </Link>
 
+                <Link className="loc-link" to="/spots">
+                  <div className="loc-button">
+                    <div className="photo"></div>
+                    <h1>Austin</h1>
+                  </div>
+                </Link>
+
+                <Link className="loc-link" to="/spots">
+                  <div className="loc-button">
+                    <div className="photo"></div>
+                    <h1>San Diego</h1>
+                  </div>
+                </Link>
+
+                <Link className="loc-link" to="/spots">
+                  <div className="loc-button">
+                    <div className="photo"></div>
+                    <h1>Los Angeles</h1>
+                  </div>
+                </Link>
+
+                <Link className="loc-link" to="/spots">
+                  <div className="loc-button">
+                    <div className="photo"></div>
+                    <h1>Denver</h1>
+                  </div>
+                </Link>
+
+                <Link className="loc-link" to="/spots">
+                  <div className="loc-button">
+                    <div className="photo"></div>
+                    <h1>Houston</h1>
+                  </div>
+                </Link>
+
+              </div>
         );
       }
     };
@@ -58,13 +96,13 @@ class MainPage extends React.Component {
       <div className="freeze">
         <header className="header">
           <nav className="header-nav">
-            <div>
+            <div className="left">
               <h1 className="header-logo">
               <Link to="/">
                 <img src={window.staticImages.headerImage}></img>
               </Link>
             </h1>
-            <div>
+            <div className="git">
               <span>Airbnb clone</span>
               <br></br>
               <span>  by Jay Johnson |</span>

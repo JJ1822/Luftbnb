@@ -13,12 +13,12 @@ const customStyles = {
     },
     content: {
       position: 'absolute',
-      top: '130px',
+      top: '90px',
       height: '580px',
-      width: '510px',
+      width: '470px',
       border: '1px solid #ccc',
       background: '#fff',
-      overflow: 'auto',
+      overflow: 'visible',
       WebkitOverflowScrolling: 'touch',
       outline: 'none',
       padding: '20px'
