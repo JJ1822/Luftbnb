@@ -3,10 +3,10 @@
   <head>
     <title>Luftbnb</title>
     <%= csrf_meta_tags %>
-    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_API_KEY"]}" %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?key=#{ENV["GOOGLE_API_KEY"]}&libraries=places" %>
     <%= stylesheet_link_tag    'application' %>
     <%= javascript_include_tag 'application' %>
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Work+Sans" rel="stylesheet">
     <%= favicon_link_tag asset_path('favicon.png'), :rel => 'icon', :type => 'image/png'%>
   </head>
 

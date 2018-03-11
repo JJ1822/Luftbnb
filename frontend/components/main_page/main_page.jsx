@@ -35,10 +35,16 @@ class MainPage extends React.Component {
   }
 
   render() {
+    const title = () => {
+      if(this.props.currentUser && this.props.pathname === "/" ) {
+        return <h3>Explore Luftbnb</h3>
+        }
+      }
+
     const navButtons = () => {
       if(this.props.currentUser && this.props.pathname === "/" ) {
         return (
-              <div>
+              <div className="cont">
 
                 <Link className="loc-link" to="/spots">
                   <div className="loc-button">
@@ -49,35 +55,35 @@ class MainPage extends React.Component {
 
                 <Link className="loc-link" to="/spots">
                   <div className="loc-button">
-                    <div className="photo"></div>
+                    <div className="photoa"></div>
                     <h1>Austin</h1>
                   </div>
                 </Link>
 
                 <Link className="loc-link" to="/spots">
                   <div className="loc-button">
-                    <div className="photo"></div>
+                    <div className="photosan"></div>
                     <h1>San Diego</h1>
                   </div>
                 </Link>
 
                 <Link className="loc-link" to="/spots">
                   <div className="loc-button">
-                    <div className="photo"></div>
+                    <div className="photola"></div>
                     <h1>Los Angeles</h1>
                   </div>
                 </Link>
 
                 <Link className="loc-link" to="/spots">
                   <div className="loc-button">
-                    <div className="photo"></div>
+                    <div className="photoden"></div>
                     <h1>Denver</h1>
                   </div>
                 </Link>
 
                 <Link className="loc-link" to="/spots">
                   <div className="loc-button">
-                    <div className="photo"></div>
+                    <div className="photohou"></div>
                     <h1>Houston</h1>
                   </div>
                 </Link>
@@ -113,7 +119,7 @@ class MainPage extends React.Component {
           </nav>
         </header>
         <div className="navigation-div">
-
+          {title()}
           {navButtons()}
         </div>
         {background()}

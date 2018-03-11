@@ -38,14 +38,29 @@ class SpotForm extends React.Component {
     this.props.createSpot(spot);
   }
 
+  // renderErrors() {
+  //     return (
+  //       <ul className="login-errors" >
+  //         {this.props.errors && this.props.errors.map((error, i) => (
+  //           <li key={`error-${i}`}>{error}</li>
+  //         ))}
+  //       </ul>
+  //     );
+
   render() {
+    console.log(this.state);
     return (
       <div className="spot-main-form">
+
         <div className="spot-form">
-          <span>Hi, name! Let's list your space.</span>
+          <span>Hi, {this.props.user.first_name}! Let's list your space.</span>
           <h3>Where's your place located?</h3>
-          <SpotAutocomplete />
-          <SpotIndexItem />
+          <form>
+
+            <SpotAutocomplete state={this.state}/>
+            <SpotIndexItem />
+            <button type="submit">Submit</button>
+          </form>
         </div>
       </div>
     );
