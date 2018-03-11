@@ -38,6 +38,11 @@ class SpotForm extends React.Component {
     this.props.createSpot(spot);
   }
 
+  onClick(e) {
+    e.preventDefault();
+
+  }
+
   // renderErrors() {
   //     return (
   //       <ul className="login-errors" >
@@ -51,17 +56,84 @@ class SpotForm extends React.Component {
     console.log(this.state);
     return (
       <div className="spot-main-form">
+        <span>Hi, {this.props.user.first_name}! Let's list your space.</span>
+        <h3>Where's your place located?</h3>
+            <div className="spot-options">
+              <div className="name-div">
+                <input
+                  type="text"
+                  placeholder="Title of your listing"
+                  value={this.state.name}
+                  />
+                <textarea
+                  placeholder="Please describe your listing"
+                  value={this.state.description}
+                  />
+              </div>
+              <div>
+                <h3>How many guests can your place accommodate?</h3>
+                <div>
+                  <span>Guests</span>
+                </div>
+                <div>
+                  <button className="plus"></button>
+                </div>
+                <div>5</div>
+                <div>
+                  <button className="minus"></button>
+                </div>
+              </div>
 
-        <div className="spot-form">
-          <span>Hi, {this.props.user.first_name}! Let's list your space.</span>
-          <h3>Where's your place located?</h3>
-          <form>
+              <div className="amenities">
+                <label className="container control--checkbox">Wifi
+                  <input type="checkbox" value={this.state.amenities}  />
+                  <div className="checkmark"></div>
+                </label>
+                <label className="container control--checkbox">Kitchen
+                  <input type="checkbox" value={this.state.amenities} />
+                  <div className="checkmark"></div>
+                </label>
 
-            <SpotAutocomplete state={this.state}/>
-            <SpotIndexItem />
+                <label className="container control--checkbox">Essentials
+                  <input type="checkbox" value={this.state.amenities} />
+                  <div className="checkmark"></div>
+                </label>
+
+                <label className="container control--checkbox">Pool
+                  <input type="checkbox" value={this.state.amenities} />
+                  <div className="checkmark"></div>
+                </label>
+
+                <label className="container control--checkbox">Gym
+                  <input type="checkbox" value={this.state.amenities} />
+                  <div className="checkmark"></div>
+                </label>
+
+                <label className="container control--checkbox">Patio
+                  <input type="checkbox" value={this.state.amenities} />
+                  <div className="checkmark"></div>
+                </label>
+
+                <label className="container control--checkbox">Washer/Dryer
+                  <input type="checkbox" value={this.state.amenities} />
+                  <div className="checkmark"></div>
+                </label>
+
+                <label className="container control--checkbox">Heating
+                  <input type="checkbox" value={this.state.amenities} />
+                  <div className="checkmark"></div>
+                </label>
+
+                <label className="container control--checkbox">Air Conditioning
+                  <input type="checkbox" value={this.state.amenities} />
+                  <div className="checkmark"></div>
+                </label>
+
+              </div>
+
+            </div>
+
             <button type="submit">Submit</button>
-          </form>
-        </div>
       </div>
     );
   }

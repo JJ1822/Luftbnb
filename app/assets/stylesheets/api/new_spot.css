@@ -88,3 +88,35 @@
     position: absolute;
     display: none;
 }
+
+.plus {
+  display: inline-block;
+    cursor: pointer;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1;
+    position: relative;
+    touch-action: manipulation;
+    border: 2px solid transparent;
+    border-color: #008489;
+    background: transparent;
+    width: 32px;
+    height: 32px;
+    border-width: 1px;
+}
+
+.minus {
+  display: inline-block;
+    cursor: pointer;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1;
+    position: relative;
+    touch-action: manipulation;
+    border: 2px solid transparent;
+    border-color: #008489;
+    background: transparent;
+    width: 32px;
+    height: 32px;
+    border-width: 1px;
+}
