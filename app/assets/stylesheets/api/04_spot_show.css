@@ -88,4 +88,19 @@ grid-column-gap: 4rem;
   font-weight: 300 !important;
   list-style: none;
   display: inline-block;
+  margin-left: 10px;
+}
+
+.show-amenities {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.show-icons {
+  width: 20%;
+}
+
+.show-div-icons {
+  display: flex;
+  align-items: center;
 }

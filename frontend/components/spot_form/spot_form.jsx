@@ -42,7 +42,6 @@ class SpotForm extends React.Component {
   }
 
   update(field) {
-    console.log(field);
     return e => this.setState({
       [field]: e.currentTarget.value
     });
@@ -65,7 +64,6 @@ class SpotForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this);
     const spot = Object.assign({}, this.state);
     this.props.createSpot(spot);
   }
@@ -136,14 +134,15 @@ class SpotForm extends React.Component {
   //         ))}
   //       </ul>
   //     );
+  //   }
 
   render() {
-    console.log(this.state);
     return (
       <div className="spot-main-form">
+
         <div className="title">Hi, <span>{this.props.user.first_name}!</span> Let's list your space.</div>
         <h3>Where's your place located?</h3>
-        <form >
+        <form onSubmit={this.handleSubmit}>
             <SpotAutocomplete />
         <h3>Tell us about your place.</h3>
             <div className="spot-options">

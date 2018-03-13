@@ -154,8 +154,11 @@ class MainPage extends React.Component {
               <br></br>
               <span>  by Jay Johnson |</span>
             </div>
-            <a href="https://github.com/JJ1822/Luftbnb"><i class="devicon-github-plain colored"></i></a>
+            <a href="https://github.com/JJ1822/"><i className="devicon-github-plain colored"></i></a>
+            <a className ="linkin" href="https://www.linkedin.com/in/jay-johnson-4b577341/"><i className="fab fa-linkedin"></i></a>
           </div>
+
+
 
             {this.loginLink()}
           </nav>

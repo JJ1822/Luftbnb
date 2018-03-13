@@ -882,4 +882,4 @@ Spot.create!(latitude: 29.725319, longitude: -95.412674,
              num_guests: "6 guests", num_beds: "3 beds", num_bedrooms: "3 bedrooms",num_bathrooms: "3 bathrooms", author_id: 3, name: "Our Home is your Home",
              img_url: "https://cdn.stocksnap.io/img-thumbs/960w/14B30A6585.jpg")
 
-User.create!(email: "ILovetoCreateCoolStuff@gmail.com", first_name: "IamAHardWorker", password: "password")
+User.create!(email: "ILovetoCreateCoolStuff@gmail.com", first_name: "Jay Johnson", password: "password")

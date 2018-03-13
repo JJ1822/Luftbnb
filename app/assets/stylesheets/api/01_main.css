@@ -207,3 +207,16 @@ i {
   font-size: 28px;
   transition-timing-function: ease-in-out;
 }
+
+.linkin {
+  font-size: 20px;
+  margin-left: 10px;
+
+}
+
+.linkin:hover {
+  color: #008489;
+  transition-duration: .8s;
+  font-size: 28px;
+  transition-timing-function: ease-in-out;
+}

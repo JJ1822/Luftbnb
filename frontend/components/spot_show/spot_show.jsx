@@ -15,12 +15,12 @@ class SpotShow extends React.Component {
       return null;
     }
     const amen = spot.amenities.map(am =>
-      <div>
-        <div></div>
+      <div className="show-div-icons">
+        <img className="show-icons" src={window.staticImages[am]}/>
         <li className="amenit">{am}</li>
       </div>
     )
-    console.log(this);
+
     return (
       <div className="spot-grid">
         <div className="spot-show">
@@ -44,7 +44,7 @@ class SpotShow extends React.Component {
             <p>{spot.description}</p>
             <div className="show-amentities">
               <h3>Amenities</h3>
-              <div className="amen">
+              <div className="show-amenities">
                 {amen}
               </div>
 
