@@ -1,41 +1,67 @@
 .spot-main-form {
-  padding-top: 115px;
+  padding-top: 60px;
   padding-left: 190px;
+  font-family: Work Sans;
+  width: 47%;
+  margin-bottom: 50px;
 }
 
-.spot-options select{
-   -webkit-appearance: button;
-   -webkit-border-radius: 2px;
-
-   -webkit-padding-end: 20px;
-   -webkit-padding-start: 2px;
-   -webkit-user-select: none;
-   background-image: url(http://i62.tinypic.com/15xvbd5.png);
-   background-position: 93% center;
-   background-repeat: no-repeat;
-   border: 1px solid #AAA;
-   color: #555;
-   font-size: inherit;
-   overflow: hidden;
-   padding: 5px 10px;
-   text-overflow: ellipsis;
-   white-space: nowrap;
-   width: 300px;
-   height: 33px;
-   margin-right: 20px;
-   cursor: pointer;
+.spot-main-form h3{
+  font-weight: 700;
+  font-size: 28px;
+  color: #484848;
 }
+
+.title {
+  font-size: 19px;
+  margin-bottom: 40px;
+}
+
+.title span{
+  font-weight: 300;
+  color: #008489;
+}
+
+.info-input h3{
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #484848;
+}
+
+
+
+.info-input span{
+  margin-right: 148px;
+}
+
+.span {
+  font-size: 19px;
+  color: #787878;
+}
+
+.select {
+  margin-top: 10px;
+}
+
+.mindiv {
+  margin-right: 35px;
+}
+
+.posdiv {
+  margin-left: 35px;
+}
+
+
 
 .amenities {
   display: inline-block;
-  vertical-align: top;
-  background: #fff;
+
   text-align: left;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-  padding: 30px;
-  width: 200px;
-  height: 210px;
-  margin: 10px;
+  column-count: 2;
+  width: 78%;
+  margin-top: 20px;
+
 }
 
 .container {
@@ -45,11 +71,12 @@
   margin-bottom: 15px;
   cursor: pointer;
   font-size: 18px;
+  width: 52%;
+  margin-right: 73px;
 }
 
 .container input{
   position: absolute;
-  z-index: -1;
   opacity: 0;
 }
 
@@ -106,7 +133,7 @@
 }
 
 .minus {
-  display: inline-block;
+    display: inline-block;
     cursor: pointer;
     border-radius: 50%;
     text-align: center;
@@ -119,4 +146,179 @@
     width: 32px;
     height: 32px;
     border-width: 1px;
+
+}
+
+.minus img {
+  width: 49%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.plus img {
+  width: 77%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.guests {
+  display: flex;
+  align-items: center;
+  font-size: 19px;
+  font-family: Work Sans;
+  margin-bottom: 40px;
+}
+
+.amen {
+  margin-top: 40px;
+}
+
+.beds {
+  display: flex;
+  align-items: center;
+  font-size: 19px;
+  font-family: Work Sans;
+  margin-top: 40px;
+}
+
+.bathrooms {
+  display: flex;
+  align-items: center;
+  font-size: 19px;
+  font-family: Work Sans;
+  margin-top: 40px;
+}
+
+.bathrooms span {
+  width: 100px;
+}
+
+.guests span {
+  width: 100px;
+}
+
+.beds span {
+  width: 100px;
+}
+
+.spot-main-form input {
+  display: block;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: calc(100% - 150px);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 19px;
+  font-style: bold;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+
+.spot-main-form input:focus {
+  border: 1px solid #008489;
+  transition: .3s;
+}
+.spot-main-form textarea {
+  display: block;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: calc(100% - 150px);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 19px;
+  font-style: bold;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+
+.spot-main-form textarea:focus {
+  border: 1px solid #008489;
+  transition: .3s;
+}
+
+
+.spot-options select{
+  width: 52%;
+  background-color: #fff;
+  margin-bottom: 40px;
+  color: #787878;
+  font-size: 19px;
+  font-weight: 300;
+  font-family: Work Sans;
+	/* inline SVG */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20256%20448%22%20enable-background%3D%22new%200%200%20256%20448%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.arrow%7Bfill%3A%23424242%3B%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22arrow%22%20d%3D%22M255.9%20168c0-4.2-1.6-7.9-4.8-11.2-3.2-3.2-6.9-4.8-11.2-4.8H16c-4.2%200-7.9%201.6-11.2%204.8S0%20163.8%200%20168c0%204.4%201.6%208.2%204.8%2011.4l112%20112c3.1%203.1%206.8%204.6%2011.2%204.6%204.4%200%208.2-1.5%2011.4-4.6l112-112c3-3.2%204.5-7%204.5-11.4z%22%2F%3E%3C%2Fsvg%3E%0A");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: auto 50%;
+  border-radius:2px;
+  border: 1px solid #ccc;
+  padding: 10px 30px 10px 10px;
+  // disable default appearance
+  outline:inherit;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  &::-ms-expand { display: none };
+}
+
+
+.spot-options select:focus {
+  border: 1px solid #008489;
+  outline: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  transition: .3s;
+}
+
+.button {
+  width: 50%;
+  border-radius: 5px;
+  height: 40px;
+  background-color: #FF5A5F;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  font-family: 'Quicksand', sans-serif;
+  margin-bottom: 15px;
+}
+
+.name-div select {
+  margin-bottom: 10px;
+}
+
+.price {
+  margin-top: 0px;
+  width: 70% !important;
+  margin-bottom: 0px !important;
+  background-position: right 10px center !important;
+  border: none !important;
+  padding-left: 0px !important;
+}
+
+.dollar {
+  width: 10%;
+  float: left;
+  font-size: 20px;
+  font-family: Work Sans;
+  padding-top: 10px;
+  padding-left: 18px;
+}
+
+.divforprice {
+  display: block !important;
+  border: 1px solid #ccc;
+  width: 30%;
+  border-radius: 3px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+
+.divforprice:hover {
+  border: 1px solid #008489;
+  transition: .3s;
+}
+
+.counternum {
+  width: 5%;
+  text-align: center;
 }

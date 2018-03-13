@@ -14,7 +14,13 @@ class SpotShow extends React.Component {
     if(!spot) {
       return null;
     }
-    const amen = spot.amenities.map(am => <li className="amenit">{am}</li>);
+    const amen = spot.amenities.map(am =>
+      <div>
+        <div></div>
+        <li className="amenit">{am}</li>
+      </div>
+    )
+    console.log(this);
     return (
       <div className="spot-grid">
         <div className="spot-show">
@@ -24,9 +30,13 @@ class SpotShow extends React.Component {
           <span>{spot.room_type}</span>
           <h1>{spot.name}</h1>
           <div className="show-details">
+            <img src={window.staticImages.people}/>
             <span>{spot.num_guests}</span>
+            <img src={window.staticImages.door}/>
             <span>{spot.num_bedrooms}</span>
+            <img src={window.staticImages.bed}/>
             <span>{spot.num_beds}</span>
+            <img src={window.staticImages.bath}/>
             <span>{spot.num_bathrooms}</span>
           </div>
           <div className="show-description">

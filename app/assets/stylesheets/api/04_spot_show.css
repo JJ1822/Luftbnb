@@ -20,11 +20,19 @@ grid-column-gap: 4rem;
   object-fit: cover;
 }
 
+.show-details img{
+  width: 4%;
+  height: 19px;
+  margin-right: 8px;
+  color: #484848;
+}
+
 .show-heading {
   grid-row: 3;
   grid-column: 2/3;
   padding-right: 15px;
   padding-bottom: 40px;
+  font-family: Work Sans;
 }
 
 .show-heading span {
@@ -41,17 +49,18 @@ grid-column-gap: 4rem;
   color: #484848;
   line-height: 40px;
   letter-spacing: -.6px;
-  padding-top: 5px;
+  padding-top: 8px;
 }
 
 .show-details {
-  padding: 15px 0;
+  padding: 18px 0;
+  display: flex;
 }
 
 .show-details span {
   text-transform: lowercase;
   font-weight: 300;
-  font-size: 17px;
+  font-size: 16px;
   color: #484848;
   letter-spacing: .2px;
   margin-right: 26px;

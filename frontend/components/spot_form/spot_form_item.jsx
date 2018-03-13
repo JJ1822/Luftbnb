@@ -1,81 +1,25 @@
 import React from 'react';
 
-const SpotFormItem = (state) => {
-  console.log(state);
+const SpotFormItem = ({update}) => {
+  
   return(
     <div className="spot-options">
-      <div className="name-div">
-        <input
-          type="text"
-          placeholder="Title of your listing"
-          value={this.state.name}
-          />
-        <textarea
-          placeholder="Please describe your listing"
-          value={this.state.description}
-          />
+      <span className="span">How many bedrooms can guests use?</span>
+      <div className="select">
+
+      <select onChange={update('num_bedrooms')}>
+        <option value="1 bedroom">1 bedroom</option>
+        <option value="2 bedrooms">2 bedrooms</option>
+        <option value="3 bedrooms">3 bedrooms</option>
+        <option value="4 bedrooms">4 bedrooms</option>
+        <option value="5 bedrooms">5 bedrooms</option>
+        <option value="6 bedrooms">6 bedrooms</option>
+        <option value="7 bedrooms">7 bedrooms</option>
+        <option value="8 bedrooms">8 bedrooms</option>
+        <option value="9 bedrooms">9 bedrooms</option>
+        <option value="10 bedrooms">10 bedrooms</option>
+      </select>
       </div>
-      <div>
-        <h3>How many guests can your place accommodate?</h3>
-        <div>
-          <span>Guests</span>
-        </div>
-        <div>
-          <button></button>
-        </div>
-        <div>5</div>
-        <div>
-          <button></button>
-        </div>
-      </div>
-
-      <div className="amenities">
-        <label className="container control--checkbox">Wifi
-          <input type="checkbox" value={this.state.amenities}  />
-          <div className="checkmark"></div>
-        </label>
-        <label className="container control--checkbox">Kitchen
-          <input type="checkbox" value={this.state.amenities} />
-          <div className="checkmark"></div>
-        </label>
-
-        <label className="container control--checkbox">Essentials
-          <input type="checkbox" value={this.state.amenities} />
-          <div className="checkmark"></div>
-        </label>
-
-        <label className="container control--checkbox">Pool
-          <input type="checkbox" value={this.state.amenities} />
-          <div className="checkmark"></div>
-        </label>
-
-        <label className="container control--checkbox">Gym
-          <input type="checkbox" value={this.state.amenities} />
-          <div className="checkmark"></div>
-        </label>
-
-        <label className="container control--checkbox">Patio
-          <input type="checkbox" value={this.state.amenities} />
-          <div className="checkmark"></div>
-        </label>
-
-        <label className="container control--checkbox">Washer/Dryer
-          <input type="checkbox" value={this.state.amenities} />
-          <div className="checkmark"></div>
-        </label>
-
-        <label className="container control--checkbox">Heating
-          <input type="checkbox" value={this.state.amenities} />
-          <div className="checkmark"></div>
-        </label>
-
-        <label className="container control--checkbox">Air Conditioning
-          <input type="checkbox" value={this.state.amenities} />
-          <div className="checkmark"></div>
-        </label>
-
-      </div>
-
     </div>
   );
 };

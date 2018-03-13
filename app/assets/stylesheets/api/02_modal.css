@@ -1,6 +1,6 @@
 .login-form input {
   display: block;
-  background: #fff;
+  /*background: #fff;*/
   border: 1px solid #ccc;
   padding: 10px;
   width: calc(100% - 22px);
@@ -13,8 +13,8 @@
 
 .login-form input:focus {
   border: 1px solid #008489;
+  transition: .3s;
 }
-
 
 .login-form {
   margin: 0 10px 20px 10px;
@@ -86,7 +86,8 @@
   border: 1px solid #008489;
   outline: 0;
   -webkit-box-shadow: none;
-  box-shadow: none
+  box-shadow: none;
+  transition: .3s;
 }
 
 .bday select:last-child {
@@ -102,6 +103,7 @@
   font-size: 16px;
   font-family: 'Quicksand', sans-serif;
   margin-bottom: 15px;
+  border-radius: 5px;
 }
 
 .login-footer {
@@ -114,6 +116,7 @@
 }
 .login-footer a:hover {
   border-bottom: 1px solid #008489;
+  transition: .3s;
 }
 
 .modal-close {

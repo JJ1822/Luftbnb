@@ -185,6 +185,7 @@ class SessionForm extends React.Component {
             placeholder="Email address"
             value={this.state.email}
             onChange={this.update('email')}
+            className="email"
             />
           { nameDiv() }
             <input

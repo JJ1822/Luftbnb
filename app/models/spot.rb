@@ -6,6 +6,7 @@ class Spot < ApplicationRecord
   has_many :reviews
 
   def self.in_bounds(bounds)
+    p bounds
     self.where("latitude < ?", bounds[:northEast][:latitude])
       .where("latitude > ?", bounds[:southWest][:latitude])
       .where("longitude > ?", bounds[:southWest][:longitude])

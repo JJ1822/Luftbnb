@@ -1,7 +1,7 @@
 .spot-item-grid {
   grid-column: 1/3;
   display: block;
-  padding-top: 75px;
+  padding-top: 0px;
   padding-left: 10px;
 
 }
@@ -17,10 +17,14 @@
   display: flex;
   flex-flow: column nowrap;
   height: 100%;
-  max-width: 375px;
-  min-width: 300px;
+  max-width: 355px;
+  min-width: 280px;
   margin: 7px;
   padding: 3px;
+}
+
+.spot_index_item:hover {
+  background: linear-gradient(to left, #bfbec2, transparent, transparent, #bfbec2);
 }
 
 .spot-index-container {
@@ -32,7 +36,7 @@
 .map-container {
   z-index: 1;
   position: fixed !important;
-  width: 43% !important;
+  width: 40% !important;
   height: 89.5%;
   right: 0px;
   top: 85px;
@@ -92,6 +96,7 @@
 .freeze {
   position: fixed;
   width: 100%;
+  z-index: 2;
 }
 
 .spot-item-grid ul a:hover {

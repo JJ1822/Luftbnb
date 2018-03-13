@@ -21,25 +21,52 @@ export default class MarkerManager {
   }
 
   createMarkerFromSpot(spot) {
+    let test = {
+    url: window.staticImages.map, // url
+    scaledSize: new google.maps.Size(70, 70), // scaled size
+    labelOrigin: new google.maps.Point(34,27), // origin
+    anchor: new google.maps.Point(50, 50) // anchor
+};
     let { id, latitude, longitude, price_per_day } = spot;
     const position = new google.maps.LatLng( latitude, longitude);
     const marker = new google.maps.Marker({
       position,
       map: this.map,
       spotId: id,
-      animation: google.maps.Animation.DROP
+      icon: test,
+      price: price_per_day,
+      label: {
+      text: `$${price_per_day}`,
+      color: 'black',
+      fontSize: '15px',
+      fontWeight: 'bold'
+    }
+
     });
-    this.markers[id] = marker;
+    // this.markers[id] = marker;
 
-    // let infoWindow = new google.maps.InfoWindow({
-    //   content: content
-    // });
-    //
-    // marker.addListener('click', () => {
-    //   infoWindow.open(this.map, marker);
-    // });
-
-
+  // const content = `
+  //     <div class="price-marker" ref="${id}">
+  //       <div>$${ price_per_day }</div>
+  //      </div>
+  //   `;
+  //
+  // const infowindow = new google.maps.InfoWindow({
+  //     maxWidth: 100,
+  //     content: content,
+  //     disableAutoPan: true,
+  //     position: position,
+  //     zIndex: 5
+  //   });
+  //
+  //   infowindow.open(this.map);
+  //
+  //
+  //   return {
+  //     spotId: id,
+  //     marker,
+  //     infowindow
+  //   };
   }
 
   removeMarker(marker) {
