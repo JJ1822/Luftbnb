@@ -86,7 +86,7 @@ class MainPage extends React.Component {
       if(this.props.currentUser && this.props.pathname === "/" ) {
         return (
               <div className="cont">
-
+                {window.scrollTo(0, 0)}
                 <Link className="loc-link" to="/city/sanfrancisco">
                   <div className="loc-button" id="1">
                     <div className="photo"></div>

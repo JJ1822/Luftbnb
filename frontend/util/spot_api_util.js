@@ -22,7 +22,7 @@ export const createSpot = (spot) => {
     $.ajax({
       method: 'POST',
       url: 'api/spots',
-      data: spot
+      data: {spot}
     })
   );
 };

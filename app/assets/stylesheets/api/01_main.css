@@ -198,12 +198,12 @@ i {
   font-size: 20px;
   margin-left: 7px;
   padding-top: 15px;
-  transition-duration: 1s;
+  transition-duration: .8s;
 }
 
 .devicon-github-original-wordmark.colored, .devicon-github-original.colored, .devicon-github-plain-wordmark.colored, .devicon-github-plain.colored:hover {
   color: #008489;
-  transition-duration: 1s;
+  transition-duration: .8s;
   font-size: 28px;
   transition-timing-function: ease-in-out;
 }
@@ -211,7 +211,7 @@ i {
 .linkin {
   font-size: 20px;
   margin-left: 10px;
-
+  transition-duration: .8s;
 }
 
 .linkin:hover {

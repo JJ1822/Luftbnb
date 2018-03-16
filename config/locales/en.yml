@@ -31,3 +31,15 @@
 
 en:
   hello: "Hello world"
+
+en:
+  activerecord:
+    attributes:
+      spot:
+        latitude: "Address"
+        room_type: "Room type"
+        price_per_day: "Price of your listing"
+        num_guests: "Number of guests"
+        num_beds: "Number of beds"
+        num_bedrooms: "Number of bedrooms"
+        name: "Title of your listing"

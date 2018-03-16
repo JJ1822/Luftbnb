@@ -17,18 +17,20 @@ class SpotForm extends React.Component {
       amenities: [],
       num_guests: "",
       num_beds: "",
-      num_bedrooms: "",
-      img_url: "",
-      author_id: "",
+      num_bedrooms: "1 bedroom",
+      img_url: "https://cdn.pixabay.com/photo/2016/06/24/10/47/render-1477041_960_720.jpg",
+      author_id: this.props.user.id,
       num_bathrooms: "",
       guests: 0,
       beds: 0,
       bathrooms: 0
     };
+    this.submit = false;
 
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
+    this.updateLatLong = this.updateLatLong.bind(this);
     this.bedsNeg = this.bedsNeg.bind(this);
     this.bedsPos = this.bedsPos.bind(this);
     this.guestNeg = this.guestNeg.bind(this);
@@ -41,7 +43,18 @@ class SpotForm extends React.Component {
 
   }
 
+  componentWillReceiveProps(nextProps) {
+    const nextSpots = Object.keys(nextProps.spots);
+    const spots = Object.keys(this.props.spots);
+    const spotId = nextSpots[nextSpots.length-1]
+
+    if(nextSpots.length > spots.length && this.submit) {
+      this.props.history.push(`/spots/${spotId}`);
+    }
+  }
+
   update(field) {
+
     return e => this.setState({
       [field]: e.currentTarget.value
     });
@@ -49,10 +62,11 @@ class SpotForm extends React.Component {
   }
 
   updateAmen(e, value) {
+    console.log(this.state);
     if (e.target.checked){
      //append to array
       this.setState({
-        amenities: this.state.amenities.concat([value])
+        amenities: this.state.amenities.concat([value.toLowerCase()])
       })
     } else {
      //remove from array
@@ -62,10 +76,74 @@ class SpotForm extends React.Component {
     }
   }
 
+  updateLatLong(places) {
+    this.setState({
+      latitude: places.lat(),
+      longitude: places.lng()
+    })
+  }
+
+  updateBeds() {
+    return new Promise((resolve, reject) => {
+      if(this.state.beds === 1) {
+        resolve(this.setState({
+          num_beds: "1 bed"
+        }));
+      } else {
+        resolve(this.setState({
+          num_beds: `${this.state.beds} beds`
+        }));
+      }
+    })
+  }
+
+  updateGuests() {
+    return new Promise((resolve, reject) => {
+      if(this.state.guests === 1) {
+        resolve(this.setState({
+          num_guests: "1 guest"
+        }));
+      } else {
+        resolve(this.setState({
+          num_guests: `${this.state.guests} guests`
+        }));
+      }
+    })
+  }
+
+  updateBathrooms() {
+    return new Promise((resolve, reject) => {
+      if(this.state.bathrooms === 1) {
+        resolve(this.setState({
+          num_bathrooms: "1 bathroom"
+        }));
+      } else {
+        resolve(this.setState({
+          num_bathrooms: `${this.state.bathrooms} bathrooms`
+        }));
+      }
+    })
+  }
+
+  navigateToSearch() {
+   // this.props.history.push('/:spotid');
+ }
+
+
   handleSubmit(e) {
     e.preventDefault();
-    const spot = Object.assign({}, this.state);
-    this.props.createSpot(spot);
+    this.updateBeds()
+        .then(this.updateGuests()
+        .then(this.updateBathrooms()
+        .then(() => {
+          const spot = Object.assign({}, this.state);
+          this.submit = true;
+          this.props.createSpot(spot);
+        })))
+    // delete spot.beds
+    // delete spot.bathrooms
+    // delete spot.guests
+    {window.scrollTo(0, 0)}
   }
 
   guestPos(e) {
@@ -93,6 +171,12 @@ class SpotForm extends React.Component {
         beds: this.state.beds + 1
       });
     }
+    // if(this.state.beds === 1) {
+    //   console.log("inside");
+    //   this.setState({
+    //     num_beds: "1 bed"
+    //   })
+    // }
   }
 
   bedsNeg(e) {
@@ -126,24 +210,25 @@ class SpotForm extends React.Component {
 
 
 
-  // renderErrors() {
-  //     return (
-  //       <ul className="login-errors" >
-  //         {this.props.errors && this.props.errors.map((error, i) => (
-  //           <li key={`error-${i}`}>{error}</li>
-  //         ))}
-  //       </ul>
-  //     );
-  //   }
+  renderErrors() {
+      return (
+        <ul className="login-errors" >
+          {this.props.errors && this.props.errors.map((error, i) => (
+            <li key={`error-${i}`}>{error}</li>
+          ))}
+        </ul>
+      );
+    }
 
   render() {
     return (
       <div className="spot-main-form">
-
+        {this.renderErrors()}
+        <br></br>
         <div className="title">Hi, <span>{this.props.user.first_name}!</span> Let's list your space.</div>
         <h3>Where's your place located?</h3>
         <form onSubmit={this.handleSubmit}>
-            <SpotAutocomplete />
+            <SpotAutocomplete update={this.updateLatLong}/>
         <h3>Tell us about your place.</h3>
             <div className="spot-options">
               <div className="name-div">

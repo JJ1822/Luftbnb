@@ -5,9 +5,16 @@ class SpotAutocomplete extends React.Component {
   componentDidMount() {
     var input = document.getElementById('autocomplete');
     var options = {componentRestrictions: {country: 'us'}};
-    new google.maps.places.Autocomplete(input, options);
+    let autoComplete = new google.maps.places.Autocomplete(input, options);
 
+    autoComplete.addListener('place_changed', () => {
+      let place = autoComplete.getPlace();
+      let location = place.geometry.location;
+      this.props.update(location)
+    });
   }
+
+
 
   render() {
     return (

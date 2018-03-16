@@ -1,14 +1,14 @@
 import React from 'react';
 
 const SpotFormItem = ({update}) => {
-  
+
   return(
     <div className="spot-options">
       <span className="span">How many bedrooms can guests use?</span>
       <div className="select">
 
-      <select onChange={update('num_bedrooms')}>
-        <option value="1 bedroom">1 bedroom</option>
+      <select onChange={update('num_bedrooms')} selected="selected">
+        <option value="1 bedroom" selected>1 bedroom</option>
         <option value="2 bedrooms">2 bedrooms</option>
         <option value="3 bedrooms">3 bedrooms</option>
         <option value="4 bedrooms">4 bedrooms</option>

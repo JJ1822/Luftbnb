@@ -2,6 +2,7 @@ class Api::SpotsController < ApplicationController
 
   before_action :require_user
 
+
   def index
     @spots = Spot.in_bounds(params[:bounds])
     render :index
@@ -18,6 +19,8 @@ class Api::SpotsController < ApplicationController
 
   def create
     @spot = Spot.new(spot_params)
+    p spot_params
+    p @spot
     if @spot.save
       render :show
     else
@@ -29,8 +32,8 @@ class Api::SpotsController < ApplicationController
 
   def spot_params
     params.require(:spot).permit(:latitude, :longitude, :room_type,
-                                 :price_per_day, :description, :amenities,
+                                 :price_per_day, :description,
                                  :num_guests, :num_beds, :num_bedrooms,
-                                 :img_url, :name, :author_id, :num_bathrooms)
+                                 :img_url, :name, :author_id, :num_bathrooms, :amenities => [])
   end
 end
