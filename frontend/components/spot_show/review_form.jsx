@@ -42,19 +42,19 @@ class ReviewForm extends React.Component {
             <span className="rating">
               <input type="radio" className="rating-input"
                 id="rating-input-1-5" onChange={this.update("rating")} value="5"/>
-              <label for="rating-input-1-5" className="rating-star"></label>
+              <label htmlFor="rating-input-1-5" className="rating-star"></label>
               <input type="radio" className="rating-input"
                 id="rating-input-1-4" onChange={this.update("rating")} value="4"/>
-              <label for="rating-input-1-4" className="rating-star"></label>
+              <label htmlFor="rating-input-1-4" className="rating-star"></label>
               <input type="radio" className="rating-input"
                 id="rating-input-1-3" onChange={this.update("rating")} value="3"/>
-              <label for="rating-input-1-3" className="rating-star"></label>
+              <label htmlFor="rating-input-1-3" className="rating-star"></label>
               <input type="radio" className="rating-input"
                 id="rating-input-1-2" onChange={this.update("rating")} value="2"/>
-              <label for="rating-input-1-2" className="rating-star"></label>
+              <label htmlFor="rating-input-1-2" className="rating-star"></label>
               <input type="radio" className="rating-input"
                 id="rating-input-1-1" onChange={this.update("rating")} value="1"/>
-              <label for="rating-input-1-1" className="rating-star"></label>
+              <label htmlFor="rating-input-1-1" className="rating-star"></label>
             </span>
           <br/>
           <textarea

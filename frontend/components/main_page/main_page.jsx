@@ -20,7 +20,9 @@ class MainPage extends React.Component {
   }
 
   componentWillMount() {
-    this.props.fetchSpots(bounds)
+    if(this.props.match.path === "/") {
+      this.props.fetchSpots(bounds)
+    }
 
   }
 

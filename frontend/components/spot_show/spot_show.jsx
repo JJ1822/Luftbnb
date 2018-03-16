@@ -10,12 +10,13 @@ class SpotShow extends React.Component {
   }
   render() {
 
-    const { spot, spotId, fetchSpot } = this.props;
+    const { spot, spotId, fetchSpot, reviews } = this.props;
+    console.log("working", reviews);
     if(!spot) {
       return null;
     }
     const amen = spot.amenities.map(am =>
-      <div className="show-div-icons">
+      <div key={am} className="show-div-icons">
         <img className="show-icons" src={window.staticImages[am]}/>
         <li className="amenit">{am}</li>
       </div>
@@ -47,7 +48,8 @@ class SpotShow extends React.Component {
               <div className="show-amenities">
                 {amen}
               </div>
-
+              <ReviewDetail reviews={reviews} />
+              <ReviewFormContainer />
             </div>
           </div>
         </div>
