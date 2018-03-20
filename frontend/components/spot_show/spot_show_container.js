@@ -14,7 +14,7 @@ const mapStateToProps = (state, { match }) => {
   return {
     spotId,
     spot,
-    reviews,
+    reviews
   };
 };
 

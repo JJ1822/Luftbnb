@@ -139,6 +139,8 @@ body {
   width: 100%;
   height:100vh;
   background-image: url(https://static.pexels.com/photos/248771/pexels-photo-248771.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .left {

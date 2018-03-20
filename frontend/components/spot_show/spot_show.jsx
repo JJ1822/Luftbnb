@@ -11,7 +11,7 @@ class SpotShow extends React.Component {
   render() {
 
     const { spot, spotId, fetchSpot, reviews } = this.props;
-    console.log("working", reviews);
+    console.log("working", this.props);
     if(!spot) {
       return null;
     }
