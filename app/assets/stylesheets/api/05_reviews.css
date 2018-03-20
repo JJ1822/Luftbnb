@@ -27,3 +27,21 @@
 .rating-input:checked ~ .rating-star {
     background-position: 0 0;
 }
+
+.review-form textarea{
+  display: block;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: calc(100% - 150px);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 19px;
+  font-style: bold;
+  margin-bottom: 20px;
+  border-radius: 2px;
+}
+
+.review-form textarea:focus {
+  border: 1px solid #008489;
+  transition: .3s;
+}

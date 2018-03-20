@@ -66,7 +66,7 @@ class ReviewForm extends React.Component {
           >{this.state.body}</textarea>
 
           <br/>
-          <input type="submit" />
+          <button class="button" type="submit">Submit</button>
         </form>
       </div>
     );
