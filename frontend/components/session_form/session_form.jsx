@@ -12,8 +12,6 @@ const customStyles = {
       backgroundColor: 'rgba(0, 0, 0, 0.7)'
     },
     content: {
-      position: 'absolute',
-      top: '90px',
       height: '580px',
       width: '470px',
       border: '1px solid #ccc',
@@ -167,7 +165,7 @@ class SessionForm extends React.Component {
     };
 
     return (
-      <div>
+      <div className="modal-div">
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}

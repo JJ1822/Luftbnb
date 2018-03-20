@@ -134,8 +134,21 @@
   color: red;
 }
 
-.modal {
-  float: left;
-  left: 30%;
-  /*transform: translate(-50%, -50%);*/
+.ReactModal__Content {
+  margin: 0 auto;
+  margin-top: 25vh;
+  margin-bottom: 30px;
+}
+
+.ReactModal__Overlay {
+  overflow-y: auto;
+}
+
+@media screen and (min-width: 700px) {
+
+  .ReactModal__Content {
+    margin: 0 auto;
+    margin-top: 130px;
+    margin-bottom: 30px;
+  }
 }
