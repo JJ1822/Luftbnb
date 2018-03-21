@@ -89,47 +89,48 @@ class MainPage extends React.Component {
         return (
               <div className="cont">
                 {window.scrollTo(0, 0)}
-                <Link className="loc-link" to="/city/sanfrancisco">
-                  <div className="loc-button" id="1">
-                    <div className="photo"></div>
-                    <h1>San Francisco</h1>
-                  </div>
-                </Link>
 
-                <Link  className="loc-link" to="/city/austin">
-                  <div onClick={this.handleClick} className="loc-button" id="2">
-                    <div className="photoa"></div>
-                    <h1>Austin</h1>
-                  </div>
-                </Link>
-
-                <Link className="loc-link" to="/city/sandiego">
                   <div className="loc-button">
-                    <div className="photosan"></div>
-                    <h1>San Diego</h1>
+                    <Link className="loc-link" to="/city/sanfrancisco">
+                      <div className="photo"></div>
+                      <div className="loc-title"><h1>San Francisco</h1></div>
+                    </Link>
                   </div>
-                </Link>
 
-                <Link className="loc-link" to="/city/losangeles">
                   <div className="loc-button">
-                    <div className="photola"></div>
-                    <h1>Los Angeles</h1>
+                    <Link className="loc-link" to="/city/austin">
+                      <div className="photoa"></div>
+                      <div className="loc-title"><h1>Austin</h1></div>
+                    </Link>
                   </div>
-                </Link>
 
-                <Link className="loc-link" to="/city/denver">
                   <div className="loc-button">
-                    <div className="photoden"></div>
-                    <h1>Denver</h1>
+                    <Link className="loc-link" to="/city/sandiego">
+                      <div className="photosan"></div>
+                      <div className="loc-title"><h1>San Diego</h1></div>
+                    </Link>
                   </div>
-                </Link>
 
-                <Link className="loc-link" to="/city/houston">
                   <div className="loc-button">
-                    <div className="photohou"></div>
-                    <h1>Houston</h1>
+                    <Link className="loc-link" to="/city/losangeles">
+                      <div className="photola"></div>
+                      <div className="loc-title"><h1>Los Angeles</h1></div>
+                    </Link>
                   </div>
-                </Link>
+
+                  <div className="loc-button">
+                    <Link className="loc-link" to="/city/denver">
+                      <div className="photoden"></div>
+                      <div className="loc-title"><h1>Denver</h1></div>
+                    </Link>
+                  </div>
+
+                  <div className="loc-button">
+                    <Link className="loc-link" to="/city/houston">
+                      <div className="photohou"></div>
+                      <div className="loc-title"><h1>Houston</h1></div>
+                    </Link>
+                  </div>
 
               </div>
         );

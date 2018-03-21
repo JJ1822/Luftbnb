@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 const SpotIndexItem = ({ spot }) => {
 
     return (
-      <Link className="main-link" to={`/spots/${spot.id}`}>
         <div className="spot-main-item">
+          <Link className="main-link" to={`/spots/${spot.id}`}>
           <img className="spot-main-image" src={spot.img_url}/>
           <div className="spot-index-type">
             <span className="type">{spot.room_type}<span className="dot">-</span>{spot.num_beds}</span>
@@ -17,8 +17,8 @@ const SpotIndexItem = ({ spot }) => {
           <div className="spot-index-rating">
             <span>From ${spot.price_per_day} per night</span>
           </div>
+         </Link>
         </div>
-      </Link>
     );
 };
 

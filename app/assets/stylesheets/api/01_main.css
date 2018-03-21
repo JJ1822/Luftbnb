@@ -51,13 +51,13 @@ body {
 
 .navigation-div {
   display: block;
-  padding-top: 75px;
-  padding-left: 50px;
+  padding-top: 80px;
+  padding-left: 10px
 
 }
 
 .cont {
-  display: flex;
+    display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
     width: 100%;
@@ -65,10 +65,9 @@ body {
 
 .loc-button {
   display: flex;
-  height: 100px;
-  width: 90%;
+  height: 80px;
+  width: 45%;
   border-radius: 5px;
-  text-align: right;
   align-items: center;
   margin: 20px;
   border: solid 1px #e4e4e4;
@@ -76,47 +75,49 @@ body {
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.06);
 }
 
+.loc-title {
+  display: flex;
+  float: left;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
 .photo {
   background-image: url(http://architectureimg.com/wp-content/uploads/2016/06/skyscrapers-beautiful-san-francisco-night-thebeautifulbay-skyscrapers-bridge-city-lights-desktop-backgrounds.jpg);
   background-size: cover;
   height: 100%;
-  width: 52%;
-  margin-right: 25px;
+  width: 45%;
 }
 .photoa {
   background-image: url(https://2016.export.gov/texas/build/groups/public/@eg_us_tx/documents/webcontent/~export/eg_us_tx_019269~26~DCT_Center_Content_2col/325669-6.jpg);
   background-size: cover;
   height: 100%;
-  width: 52%;
-  margin-right: 25px;
+  width: 45%;
 }
 .photosan {
   background-image: url(https://www.acg.org/sites/files/styles/masthead_1440/public/acg-san-diego-2880x1200.jpg?itok=S6EumAjl);
   background-size: cover;
   height: 100%;
-  width: 52%;
-  margin-right: 25px;
+  width: 45%;
 }
 .photola {
   background-image: url(https://c1.staticflickr.com/9/8108/8489816546_1895b44aa2_b.jpg);
   background-size: cover;
   height: 100%;
-  width: 52%;
-  margin-right: 25px;
+  width: 45%;
 }
 .photoden {
   background-image: url(https://a.cdn-hotels.com/gdcs/production61/d1157/19732e70-b7a3-11e6-9c00-0242ac110047.jpg);
   background-size: cover;
   height: 100%;
-  width: 52%;
-  margin-right: 25px;
+  width: 45%;
 }
 .photohou {
   background-image: url(https://i.ytimg.com/vi/4ITzFXjQSks/maxresdefault.jpg);
   background-size: cover;
   height: 100%;
-  width: 52%;
-  margin-right: 25px;
+  width: 45%;
 }
 
 .loc-button h1{
@@ -130,9 +131,9 @@ body {
 }
 
 .loc-link {
-  width: 30%;
-  margin-right: 40px;
-  margin-top: 3px;
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
 
 .background-pic {
