@@ -148,17 +148,25 @@ class MainPage extends React.Component {
           <nav className="header-nav">
             <div className="left">
               <h1 className="header-logo">
-              <Link to="/">
-                <img src={window.staticImages.headerImage}></img>
-              </Link>
+              <div>
+                <Link to="/">
+                  <img src={window.staticImages.headerImage}></img>
+                </Link>
+              </div>
             </h1>
             <div className="git">
-              <span>Airbnb clone</span>
-              <br></br>
-              <span>  by Jay Johnson |</span>
+              <div>
+                <span>Airbnb clone</span>
+                <br></br>
+                <span>  by Jay Johnson |</span>
+              </div>
+              <div>
+                <a href="https://github.com/JJ1822/"><i class="fab fa-github-square"></i></a>
+                <a className ="linkin" href="https://www.linkedin.com/in/jay-johnson-4b577341/"><i class="fab fa-linkedin"></i></a>
+              </div>
+
+
             </div>
-            <a href="https://github.com/JJ1822/"><i className="devicon-github-plain colored"></i></a>
-            <a className ="linkin" href="https://www.linkedin.com/in/jay-johnson-4b577341/"><i className="fab fa-linkedin"></i></a>
           </div>
 
 
