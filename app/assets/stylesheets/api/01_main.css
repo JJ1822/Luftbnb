@@ -358,4 +358,8 @@ i {
     transition-duration: .8s;
     transition-timing-function: ease-in-out;
   }
+
+  .loc-button {
+    width: 29%;
+  }
 }
