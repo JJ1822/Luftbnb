@@ -314,7 +314,7 @@ i {
   .icon-div {
     margin-top: 22px;
     font-size: 18px;
-    margin-left: 10px;
+    margin-left: 0;
   }
 
   .link-item {
@@ -344,5 +344,18 @@ i {
     width: 70px;
     padding: 0 0;
     margin-top: 0;
-}
+  }
+
+  .devicon-github-original-wordmark.colored, .devicon-github-original.colored, .devicon-github-plain-wordmark.colored, .devicon-github-plain.colored:hover {
+    color: #008489;
+    transition-duration: .8s;
+    font-size: 40px;
+    transition-timing-function: ease-in-out;
+  }
+
+  .linkin:hover {
+    color: #008489;
+    transition-duration: .8s;
+    transition-timing-function: ease-in-out;
+  }
 }

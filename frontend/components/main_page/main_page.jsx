@@ -161,7 +161,7 @@ class MainPage extends React.Component {
                 <span>  by Jay Johnson |</span>
               </div>
               <div className="icon-div">
-                <a href="https://github.com/JJ1822/"><i class="fab fa-github-square"></i></a>
+                <a className ="linkin" href="https://github.com/JJ1822/"><i class="fab fa-github-square"></i></a>
                 <a className ="linkin" href="https://www.linkedin.com/in/jay-johnson-4b577341/"><i class="fab fa-linkedin"></i></a>
               </div>
 
