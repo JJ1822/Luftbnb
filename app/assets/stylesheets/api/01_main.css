@@ -17,6 +17,8 @@ body {
   padding: 30px 25px;
   font-size: 40px;
   transition-duration: .2s;
+  margin-right: 100px;
+  border-bottom: 1px solid #008489;
 }
 
 .header-nav {
@@ -53,6 +55,7 @@ body {
   /*display: flex;*/
   /*margin-right: 10px;*/
   /*height: 75px;*/
+  padding-left: 75px;
 }
 
 .navigation-div {
@@ -153,6 +156,7 @@ body {
 .left {
   /*display: flex;*/
   align-items: center;
+  padding-left: 75px;
 }
 
 .navigation-div h3 {
@@ -200,7 +204,9 @@ body {
   margin-left: 0px;
   margin-bottom: 60px;
 }
-.left a {
+.header-image a {
+  display: flex;
+  width: 176px;
   /*margin-top: 16px;*/
 }
 i {
@@ -234,7 +240,9 @@ i {
   display: flex;
   font-size: 40px;
   padding: 20px 0;
-  padding-left: 30px;
+  padding-left: 25px;
+  margin-right: 100px;
+  border-bottom: 1px solid #008489;
   /*width: 500px;*/
 }
 

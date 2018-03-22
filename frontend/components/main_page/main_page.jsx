@@ -148,7 +148,7 @@ class MainPage extends React.Component {
           <nav className="header-nav">
             <div className="left">
               <h1 className="header-logo">
-              <div>
+              <div className="header-image">
                 <Link to="/">
                   <img src={window.staticImages.headerImage}></img>
                 </Link>
