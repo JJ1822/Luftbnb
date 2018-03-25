@@ -98,7 +98,7 @@
 
   .spot-index-item {
     width: 50vw;
-    padding: 50px;
+    /*padding: 50px;*/
     box-sizing: border-box;
   }
 }
