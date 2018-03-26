@@ -161,8 +161,8 @@ class MainPage extends React.Component {
                 <span>  by Jay Johnson |</span>
               </div>
               <div className="icon-div">
-                <a className ="linkin" href="https://github.com/JJ1822/"><i class="fab fa-github-square"></i></a>
-                <a className ="linkin" href="https://www.linkedin.com/in/jay-johnson-4b577341/"><i class="fab fa-linkedin"></i></a>
+                <a className ="linkin" href="https://github.com/JJ1822/"><i className="fab fa-github-square"></i></a>
+                <a className ="linkin" href="https://www.linkedin.com/in/jay-johnson-4b577341/"><i className="fab fa-linkedin"></i></a>
               </div>
 
 
@@ -176,16 +176,16 @@ class MainPage extends React.Component {
         </header>
         <div className="navigation-div">
           {title()}
-          <div class="dropdown">
-            <button class="dropbtn">Dropdown
-              <i class="fa fa-caret-down"></i>
+          <div className="dropdown">
+            <button className="dropbtn">Dropdown
+              <i className="fa fa-caret-down"></i>
             </button>
-            <div class="dropdown-content">
+            <div className="dropdown-content">
               <a href="#">Link 1</a>
               <a href="#">Link 2</a>
               <a href="#">Link 3</a>
             </div>
-          </div> 
+          </div>
           {navButtons()}
           <div className="randomspots">
             {explore()}

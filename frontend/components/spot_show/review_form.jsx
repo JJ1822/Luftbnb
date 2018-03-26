@@ -63,10 +63,11 @@ class ReviewForm extends React.Component {
             rows="10"
             placeholder="Leave a review"
             onChange={this.update("body")}
-          >{this.state.body}</textarea>
+            value={this.state.body}
+          ></textarea>
 
           <br/>
-          <button class="button" type="submit">Submit</button>
+          <button className="button" type="submit">Submit</button>
         </form>
       </div>
     );

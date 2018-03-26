@@ -143,18 +143,18 @@ class SessionForm extends React.Component {
             <span className="birthday">Birthday</span>
             <span className="birthday-text">To sign up, you must be 18 or older. Other people won't see your birthday.</span>
           <div className="bday">
-            <select>
-              <option disabled>Month</option>
+            <select defaultValue="">
+              <option value="" disabled>Month</option>
               <option value={this.month}>January</option>
               <option value={this.month}>February</option>
             </select>
-            <select>
-              <option disabled selected="disabled">Day</option>
+            <select defaultValue="">
+              <option value="" disabled>Day</option>
               <option value={this.day}>1</option>
               <option value={this.day}>2</option>
             </select>
-            <select>
-              <option disabled selected="disabled">Year</option>
+            <select defaultValue="">
+              <option value="" disabled>Year</option>
               <option value={this.year}>2018</option>
               <option value={this.year}>2017</option>
             </select>
@@ -170,6 +170,7 @@ class SessionForm extends React.Component {
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal}
+          ariaHideApp={false}
           style={customStyles}
           className="modal"
         >
