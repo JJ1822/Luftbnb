@@ -27,11 +27,15 @@ class MainPage extends React.Component {
   }
 
 
+  myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+    document.getElementById("dropdown").classList.toggle("show");
+  }
 
   loginLink() {
     if(this.props.currentUser) {
       return (
-        <div className="header-list">
+        <div id="dropdown" className="header-list dropdown-content">
           <div className="link-item"><Link to="/host">Become a host</Link></div>
           <div className="link-item"><Link to="/">Trips</Link></div>
           <div className="link-item"><Link onClick={this.props.logout} to="/">Log out</Link></div>
@@ -39,7 +43,7 @@ class MainPage extends React.Component {
       );
     } else {
       return (
-        <div className="header-list">
+        <div id="dropdown" className="header-list dropdown-content">
           <div className="link-item"><Link onClick={this.openModal} to="/signup">Sign up</Link></div>
           <div className="link-item"><Link onClick={this.openModal} to="/login">Log In</Link></div>
         </div>
@@ -50,6 +54,7 @@ class MainPage extends React.Component {
   openModal() {
     this.setState({modalIsOpen: true});
   }
+
 
   render() {
     // if(!this.props.spots.length) {
@@ -148,13 +153,13 @@ class MainPage extends React.Component {
           <nav className="header-nav">
             <div className="left">
               <h1 className="header-logo">
-              <div className="header-image">
+              <div onClick={this.myFunction}className="header-image">
                 <Link to="/">
                   <img src={window.staticImages.headerImage}></img>
                 </Link>
               </div>
             </h1>
-            <div className="git">
+            <div id="myDropdown" className="git dropdown-content">
               <div>
                 <span>Airbnb clone</span>
                 <br></br>
