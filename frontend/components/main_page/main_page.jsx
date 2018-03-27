@@ -176,16 +176,6 @@ class MainPage extends React.Component {
         </header>
         <div className="navigation-div">
           {title()}
-          <div className="dropdown">
-            <button className="dropbtn">Dropdown
-              <i className="fa fa-caret-down"></i>
-            </button>
-            <div className="dropdown-content">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
-            </div>
-          </div>
           {navButtons()}
           <div className="randomspots">
             {explore()}
