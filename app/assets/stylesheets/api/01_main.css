@@ -195,13 +195,19 @@ i {
   padding-top: 15px;
   transition-duration: .8s;
 }
-
 .devicon-github-original-wordmark.colored, .devicon-github-original.colored, .devicon-github-plain-wordmark.colored, .devicon-github-plain.colored:hover {
-  /*color: #008489;
+  color: #008489;
   transition-duration: .8s;
-  font-size: 28px;
-  transition-timing-function: ease-in-out;*/
+  font-size: 40px;
+  transition-timing-function: ease-in-out;
 }
+
+.linkin:hover {
+  color: #008489;
+  transition-duration: .8s;
+  transition-timing-function: ease-in-out;
+}
+
 
 .linkin {
   /*font-size: 20px;*/
@@ -209,12 +215,6 @@ i {
   transition-duration: .8s;
 }
 
-.linkin:hover {
-  /*color: #008489;
-  transition-duration: .8s;
-  font-size: 28px;
-  transition-timing-function: ease-in-out;*/
-}
 
 .git {
   display: flex;
@@ -228,7 +228,6 @@ i {
 
 .icon-div {
   margin-top: 51px;
-  margin-left: 25px;
 }
 
 .background-pic {
@@ -255,11 +254,14 @@ i {
 
 .dropdown-content {
   overflow: hidden;
-  height: 0;
+  height: auto;
   padding: 0;
   border-top: 0;
   background:#fbfbfb;
   max-height:0px;
+  transition-property: all;
+  transition-duration: 2s;
+  width: 100%;
   /*position: absolute;*/
   /*background-color: #f9f9f9;
   min-width: 160px;
@@ -286,7 +288,7 @@ i {
   z-index: 11;
   max-height:60vh;
 	transition-property: all;
-	transition-duration: 2.5s;
+	transition-duration: 3s;
   width: 100%;
 }
 
