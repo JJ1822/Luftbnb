@@ -160,14 +160,16 @@ class MainPage extends React.Component {
               </div>
             </h1>
             <div id="myDropdown" className="git dropdown-content">
-              <div>
-                <span>Airbnb clone</span>
-                <br></br>
-                <span>  by Jay Johnson |</span>
-              </div>
-              <div className="icon-div">
-                <a className ="linkin" href="https://github.com/JJ1822/"><i className="fab fa-github-square"></i></a>
-                <a className ="linkin" href="https://www.linkedin.com/in/jay-johnson-4b577341/"><i className="fab fa-linkedin"></i></a>
+              <div className="drop-div">
+                <div>
+                  <span>Airbnb clone</span>
+                  <br></br>
+                  <span>  by Jay Johnson |</span>
+                </div>
+                <div className="icon-div">
+                  <a className ="linkin" href="https://github.com/JJ1822/"><i className="fab fa-github-square"></i></a>
+                  <a className ="linkin" href="https://www.linkedin.com/in/jay-johnson-4b577341/"><i className="fab fa-linkedin"></i></a>
+                </div>
               </div>
 
 
