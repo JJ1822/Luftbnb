@@ -29,7 +29,7 @@ class MainPage extends React.Component {
 
   myFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
-    document.getElementById("dropdown").classList.toggle("show");
+    document.getElementById("dropdown").classList.toggle("show-2");
   }
 
   loginLink() {
@@ -38,14 +38,14 @@ class MainPage extends React.Component {
         <div id="dropdown" className="header-list dropdown-content">
           <div className="link-item"><Link to="/host">Become a host</Link></div>
           <div className="link-item"><Link to="/">Trips</Link></div>
-          <div className="link-item"><Link onClick={this.props.logout} to="/">Log out</Link></div>
+          <div className="link-item last-item"><Link onClick={this.props.logout} to="/">Log out</Link></div>
         </div>
       );
     } else {
       return (
         <div id="dropdown" className="header-list dropdown-content">
           <div className="link-item"><Link onClick={this.openModal} to="/signup">Sign up</Link></div>
-          <div className="link-item"><Link onClick={this.openModal} to="/login">Log In</Link></div>
+          <div className="link-item last-item"><Link onClick={this.openModal} to="/login">Log In</Link></div>
         </div>
         );
       }
