@@ -262,6 +262,8 @@ i {
   transition-property: all;
   transition-duration: 2s;
   width: 100%;
+  position: relative;
+  z-index: 1;
   /*position: absolute;*/
   /*background-color: #f9f9f9;
   min-width: 160px;
@@ -285,11 +287,12 @@ i {
 
 .show {
   height:auto;
-  z-index: 11;
   max-height:60vh;
 	transition-property: all;
-	transition-duration: 3s;
+	transition-duration: 4.5s;
   width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
 
