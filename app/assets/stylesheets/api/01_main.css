@@ -333,6 +333,10 @@ i {
     margin-left: 30px;
   }
 
+  .freeze {
+    position: fixed;
+  }
+
   .header-nav {
     display: flex;
     align-items: center;
