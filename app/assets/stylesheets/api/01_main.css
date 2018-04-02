@@ -46,8 +46,8 @@ body {
 
 .navigation-div {
   /*display: block;
-  padding-top: 80px;
-  padding-left: 10px*/
+  padding-top: 80px;*/
+  padding-left: 40px
 
 }
 
@@ -60,8 +60,8 @@ body {
 
 .loc-button {
   display: flex;
-  height: 80px;
-  width: 45%;
+  height: 90px;
+  width: 70%;
   border-radius: 5px;
   align-items: center;
   margin: 20px;
@@ -141,7 +141,7 @@ body {
   overflow: hidden;
   font-weight: 700;
   font-family: Work Sans;
-  height: 10px;
+  height: auto;
   font-size: 28px;
   letter-spacing: -0.6px;
   color: #484848;
