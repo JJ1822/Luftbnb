@@ -154,7 +154,7 @@ class MainPage extends React.Component {
             <div className="left">
               <h1 className="header-logo">
               <div onClick={this.myFunction}className="header-image">
-                <Link to="/">
+                <Link to={this.props.pathname}>
                   <img src={window.staticImages.headerImage}></img>
                 </Link>
               </div>
