@@ -36,8 +36,8 @@ class MainPage extends React.Component {
     if(this.props.currentUser) {
       return (
         <div id="dropdown" className="header-list dropdown-content">
-          <div className="link-item"><Link to="/host">Become a host</Link></div>
-          <div className="link-item"><Link to="/">Trips</Link></div>
+          <div className="link-item"><Link onClick={this.myFunction} to="/host">Become a host</Link></div>
+          <div className="link-item"><Link onClick={this.myFunction} to="/">Trips</Link></div>
           <div className="link-item last-item"><Link onClick={this.props.logout} to="/">Log out</Link></div>
         </div>
       );
