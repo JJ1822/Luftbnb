@@ -9,7 +9,7 @@
 
 .spot-grid {
 display: grid;
-grid-template-columns: 2fr 40vw 24rem 1fr;
+grid-template-columns: 2fr 83vw 24rem 1fr;
 grid-template-rows: 75vh 2rem 1fr;
 grid-column-gap: 4rem;
 }
