@@ -149,7 +149,7 @@ body {
 }
 
 .spot-main-item {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   padding-right: 20px;
   width: 45%;
 }
@@ -159,6 +159,7 @@ body {
   flex-flow: row wrap;
   justify-content: flex-start;
   width: 100%;
+  margin-bottom: 50px;
 }
 
 .spot-main-image {
