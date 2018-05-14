@@ -14,7 +14,7 @@ body {
 
 .link-item {
   display: block;
-  padding: 30px 25px;
+  padding: 30px 10px;
   font-size: 40px;
   transition-duration: .2s;
   margin-right: 30px;
@@ -47,7 +47,7 @@ body {
 .navigation-div {
   /*display: block;
   padding-top: 80px;*/
-  padding-left: 40px
+  padding: 0 20px;
 
 }
 
@@ -61,7 +61,7 @@ body {
 .loc-button {
   display: flex;
   height: 90px;
-  width: 70%;
+  width: 100%;
   border-radius: 5px;
   align-items: center;
   margin: 20px;
@@ -282,16 +282,16 @@ i {
 .drop-div {
     display: flex;
     width: 100%;
-    padding: 30px 25px;
+    padding: 30px 10px;
     border-bottom: 1px solid #008489;
     margin-left: 30px;
     margin-right: 30px;
-    padding-right: 0;
+    /*padding-right: 0;*/
     font-size: 90%;
 }
 
 .last-item {
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 .header-image {
