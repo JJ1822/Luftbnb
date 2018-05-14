@@ -298,7 +298,10 @@ i {
   margin-left: 60px;
   margin-right: 235px;
 }
-
+.ReactModal__Content {
+  width: auto !important;
+  margin-top: 0 !important;
+}
 .show {
   height:auto;
   max-height:60vh;
