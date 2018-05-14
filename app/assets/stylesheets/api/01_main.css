@@ -149,9 +149,9 @@ body {
 }
 
 .spot-main-item {
-  margin-bottom: 20px;
+  /*margin-bottom: 20px;*/
   padding-right: 20px;
-  width: 45%;
+  width: 100%;
 }
 
 .main-ul {
@@ -164,7 +164,7 @@ body {
 
 .spot-main-image {
   width: 100%;
-  height: 180px;
+  /*height: 180px;*/
   border-radius: 3px;
 }
 
