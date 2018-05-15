@@ -31,14 +31,22 @@ class SpotShow extends React.Component {
           <span>{spot.room_type}</span>
           <h1>{spot.name}</h1>
           <div className="show-details">
-            <img src={window.staticImages.people}/>
-            <span>{spot.num_guests}</span>
-            <img src={window.staticImages.door}/>
-            <span>{spot.num_bedrooms}</span>
-            <img src={window.staticImages.bed}/>
-            <span>{spot.num_beds}</span>
-            <img src={window.staticImages.bath}/>
-            <span>{spot.num_bathrooms}</span>
+            <div className="show-div-icons">
+              <img src={window.staticImages.people}/>
+              <span>{spot.num_guests}</span>
+            </div>
+            <div className="show-div-icons">
+              <img src={window.staticImages.door}/>
+              <span>{spot.num_bedrooms}</span>
+            </div>
+            <div className="show-div-icons">
+              <img src={window.staticImages.bed}/>
+              <span>{spot.num_beds}</span>
+            </div>
+            <div className="show-div-icons">
+              <img src={window.staticImages.bath}/>
+              <span>{spot.num_bathrooms}</span>
+            </div>
           </div>
           <div className="show-description">
             <h3>The space</h3>
@@ -48,8 +56,6 @@ class SpotShow extends React.Component {
               <div className="show-amenities">
                 {amen}
               </div>
-              <ReviewDetail reviews={reviews} />
-              <ReviewFormContainer />
             </div>
           </div>
         </div>
@@ -57,6 +63,8 @@ class SpotShow extends React.Component {
     );
   }
 }
+// <ReviewDetail reviews={reviews} />
+// <ReviewFormContainer />
 // <ReviewFormContainer />
 // <ReviewDetail reviews={this.props.reviews}/>
 
