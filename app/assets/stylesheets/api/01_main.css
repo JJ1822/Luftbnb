@@ -392,11 +392,14 @@ i {
     /* margin-right: 20px; */
     height: 80px;
   }
+  .last-item {
+    margin-bottom: 0;
+  }
 
   .navigation-div {
     display: block;
-    padding-top: 0;
-    padding-left: 0;
+    padding-top: 80px;
+    padding-left: 20px;
   }
 
   .background-pic {
@@ -427,6 +430,7 @@ i {
     /* position: absolute; */
     /* margin-right: 0; */
     border-bottom: none;
+    margin-left: 0;
   }
 
   .git {
@@ -462,6 +466,6 @@ i {
   }
 
   .loc-button {
-    width: 29%;
+    width: 42%;
   }
 }
