@@ -18,6 +18,7 @@ class MainPage extends React.Component {
     this.spots = [];
     this.openModal = this.openModal.bind(this);
     this.otherFunction = this.otherFunction.bind(this);
+    this.myFunction = this.myFunction.bind(this);
   }
 
   componentWillMount() {
@@ -30,8 +31,14 @@ class MainPage extends React.Component {
 
 
   myFunction() {
+    if ( $(window).width() > 739) {
+  //Add your javascript for large screens here
+    console.log(this);
+    } else {
+  //Add your javascript for small screens here
     document.getElementById("myDropdown").classList.toggle("show");
     document.getElementById("dropdown").classList.toggle("show-2");
+      }
   }
   otherFunction() {
 
@@ -169,15 +176,18 @@ class MainPage extends React.Component {
             </h1>
             <div id="myDropdown" className="git dropdown-content">
               <div className="drop-div">
-                <div>
+                <div className="about-div">
                   <span>Airbnb clone</span>
-                  <br></br>
+
                   <span>  by Jay Johnson |</span>
-                  <br></br>
-                    <a className ="linkin margin-no" href="https://github.com/JJ1822/"><i className="fab fa-github-square"></i></a>
-                    <a className ="linkin" href="https://www.linkedin.com/in/jay-johnson-4b577341/"><i className="fab fa-linkedin"></i></a>
+
+                  <a className ="linkin margin-no" href="https://github.com/JJ1822/"><i className="fab fa-github-square"></i></a>
+                  <a className ="linkin" href="https://www.linkedin.com/in/jay-johnson-4b577341/"><i className="fab fa-linkedin"></i></a>
 
                 </div>
+
+
+
               </div>
 
 

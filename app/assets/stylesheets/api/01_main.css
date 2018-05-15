@@ -277,7 +277,7 @@ i {
 }
 
 .margin-no {
-  margin-left: 0;
+  margin-left: 20px;
 }
 .drop-div {
     display: flex;
@@ -335,6 +335,25 @@ i {
     border-bottom: 1px solid #e4e4e4;
 
   }
+  .drop-div {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    /* border-bottom: 1px solid #008489; */
+     margin-left: 0;
+     margin-right: 0;
+     border-bottom: none;
+    /* padding-right: 0; */
+  }
+  .about-div {
+    display: flex;
+    flex-flow: row wrap;
+    width: 175px;
+  }
+  .dropdown-content {
+    height:auto;
+    max-height:60vh;
+  }
 
   .linkin {
     margin-left: 15px;
@@ -352,6 +371,7 @@ i {
 
   .header-nav {
     display: flex;
+    width: 100vw;
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
@@ -368,9 +388,9 @@ i {
   }
   .header-list {
     display: flex;
-    margin-right: 20px;
+    flex-direction: row-reverse;
+    /* margin-right: 20px; */
     height: 80px;
-    padding-left: 75px;
   }
 
   .navigation-div {
@@ -399,18 +419,20 @@ i {
 
   .link-item {
     display: block;
-    padding: 30px 25px;
+    /* padding: 30px 25px; */
     /* height: 80px; */
     /* text-align: center; */
     font-size: 17px;
     transition-duration: .2s;
     /* position: absolute; */
-     margin-right: 0;
-     border-bottom: none;
+    /* margin-right: 0; */
+    border-bottom: none;
   }
 
   .git {
     font-size: 17px;
+    position: absolute;
+    left: 110px;
     border-bottom: none;
   }
 
