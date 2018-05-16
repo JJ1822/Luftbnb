@@ -348,13 +348,29 @@ i {
   .about-div {
     display: flex;
     flex-flow: row wrap;
-    width: 175px;
+    width: 180px;
   }
   .dropdown-content {
     height:auto;
     max-height:60vh;
   }
-
+  .spot-main-item {
+    /* margin-bottom: 20px; */
+    padding-right: 40px;
+    width: 43%;
+  }
+  .modal-close {
+    position: relative !important;
+    top: 0 !important;
+    left: 30px !important;
+  }
+  .login-header {
+    margin-top: 0 !important;
+  }
+  .ReactModal__Content {
+    width: 470px !important;
+    margin-top: 110px !important;
+  }
   .linkin {
     margin-left: 15px;
   }

@@ -174,10 +174,10 @@ class SessionForm extends React.Component {
           style={customStyles}
           className="modal"
         >
-
+        <span onClick={this.closeModal} className="modal-close">&times;</span>
         <h1 className="login-header">{header}</h1>
         <form className="login-form" onSubmit={this.handleSubmit}>
-          <span onClick={this.closeModal} className="modal-close">&times;</span>
+          
           {this.renderErrors()}
           <input
             type="email"
