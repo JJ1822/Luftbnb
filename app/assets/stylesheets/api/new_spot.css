@@ -377,4 +377,19 @@
   .spot-options select {
     width: 22%;
   }
+  .divforprice {
+    width: 22%;
   }
+  .button {
+    width: 19%;
+  }
+  .guests span {
+    width: 300px;
+  }
+  .beds span {
+    width: 300px;
+  }
+  .bathrooms span {
+    width: 300px;
+  }
+}
