@@ -92,10 +92,10 @@
   .map-container {
     position: fixed !important;
     width: 50vw !important;
-    height: 89vh;
+    height: 90vh;
     box-sizing: border-box;
     float: right !important;
-    margin-top: 82px;
+    margin-top: 3px;
     right: 0;
   }
 
@@ -111,7 +111,7 @@
   }
 
   .card-parent {
-    padding-top: 82px;
+    /*padding-top: 82px;*/
   }
 }
 
