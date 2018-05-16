@@ -12,7 +12,7 @@ const customStyles = {
       backgroundColor: 'rgba(0, 0, 0, 0.7)'
     },
     content: {
-      height: '580px',
+      height: '583px',
       width: '470px',
       border: '1px solid #ccc',
       background: '#fff',
@@ -110,7 +110,7 @@ class SessionForm extends React.Component {
   render() {
     let statement = this.props.formType === 'signup' ? 'Already have a Luftbnb account?' : "Don't have an account?";
     let header = this.props.formType === 'signup' ? 'Sign up' : 'Log in to continue';
-    customStyles.content.height = this.props.formType === 'signup' ? '580px' : '380px';
+    customStyles.content.height = this.props.formType === 'signup' ? 'auto' : 'auto';
     let demo = () => { if(this.props.formType === 'login') {
       return (
           <button onClick={this.demoUser} >Demo</button>
@@ -177,7 +177,7 @@ class SessionForm extends React.Component {
         <span onClick={this.closeModal} className="modal-close">&times;</span>
         <h1 className="login-header">{header}</h1>
         <form className="login-form" onSubmit={this.handleSubmit}>
-          
+
           {this.renderErrors()}
           <input
             type="email"

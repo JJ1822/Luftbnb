@@ -131,6 +131,7 @@
     width: 32px;
     height: 32px;
     border-width: 1px;
+    z-index: -1;
 }
 
 .minus {
@@ -147,7 +148,7 @@
     width: 32px;
     height: 32px;
     border-width: 1px;
-
+    z-index: -1;
 }
 
 .minus img {
@@ -280,6 +281,13 @@
   font-size: 16px;
   font-family: 'Quicksand', sans-serif;
   margin-bottom: 15px;
+  border: 1px solid #FF5A5F;
+}
+.button:hover {
+  background-color: white;
+  color: #FF5A5F;
+  border: 1px solid #FF5A5F;
+  transition: .3s;
 }
 
 .name-div select {
@@ -323,3 +331,39 @@
   width: 5%;
   text-align: center;
 }
+
+@media screen and (min-width: 700px) {
+    .spot-main-form {
+      /*padding-top: 20px;*/
+      padding-left: 60px;
+      padding-right: 60px;
+      /*font-family: Work Sans;*/
+      /*width: 100%; */
+      /*margin-bottom: 50px;*/
+    }
+    .spot-main-form input {
+      width: 70%;
+    }
+    .spot-main-form textarea {
+      width: 70%;
+    }
+    .spot-options select {
+      width: 35%
+    }
+    .guests span {
+      width: 200px;
+    }
+    .beds span {
+      width: 200px;
+    }
+    .bathrooms span {
+      width: 200px;
+    }
+    .divforprice {
+      width: 35%;
+    }
+    .button {
+      width: 30%;
+    }
+
+  }
