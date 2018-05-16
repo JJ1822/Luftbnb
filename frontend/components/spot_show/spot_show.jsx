@@ -16,7 +16,7 @@ class SpotShow extends React.Component {
       return null;
     }
     const amen = spot.amenities.map(am =>
-      <div key={am} className="show-div-icons">
+      <div key={am} className="show-div-icons show-amenit">
         <img className="show-icons" src={window.staticImages[am]}/>
         <li className="amenit">{am}</li>
       </div>
