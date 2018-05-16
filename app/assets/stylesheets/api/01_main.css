@@ -164,6 +164,7 @@ body {
 
 .spot-main-image {
   width: 100%;
+  /*height: 50%;*/
   /*height: 180px;*/
   border-radius: 3px;
 }
@@ -485,4 +486,20 @@ i {
   .loc-button {
     width: 42%;
   }
+}
+@media screen and (min-width: 1000px) {
+  .loc-button {
+    width: 29%;
+  }
+  .spot-main-item {
+    /* margin-bottom: 20px; */
+     padding-right: 20px;
+    width: 17%;
+}
+.spot-main-image {
+  /*width: 100%;*/
+  /*height: 50%;*/
+  /*height: 180px;*/
+  /*border-radius: 3px;*/
+}
 }

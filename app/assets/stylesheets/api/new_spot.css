@@ -367,3 +367,14 @@
     }
 
   }
+@media screen and (min-width: 1000px) {
+  .spot-main-form input {
+    width: 45%;
+  }
+  .spot-main-form textarea {
+    width: 45%;
+  }
+  .spot-options select {
+    width: 22%;
+  }
+  }
