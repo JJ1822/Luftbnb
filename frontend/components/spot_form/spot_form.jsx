@@ -148,6 +148,7 @@ class SpotForm extends React.Component {
 
   guestPos(e) {
     e.preventDefault();
+    console.log("working");
     if(this.state.guests < 50) {
       this.setState({
         guests: this.state.guests + 1
