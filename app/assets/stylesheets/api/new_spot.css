@@ -335,7 +335,7 @@
 @media screen and (min-width: 700px) {
     .spot-main-form {
       /*padding-top: 20px;*/
-      padding-left: 150px;
+      padding-left: 60px;
       padding-right: 60px;
       /*font-family: Work Sans;*/
       /*width: 100%; */
@@ -368,6 +368,14 @@
 
   }
 @media screen and (min-width: 1000px) {
+  .spot-main-form {
+    /*padding-top: 20px;*/
+    padding-left: 150px;
+    padding-right: 60px;
+    /*font-family: Work Sans;*/
+    /*width: 100%; */
+    /*margin-bottom: 50px;*/
+  }
   .spot-main-form input {
     width: 45%;
   }
