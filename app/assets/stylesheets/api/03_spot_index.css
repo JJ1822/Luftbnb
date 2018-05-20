@@ -81,8 +81,8 @@
   /*margin-bottom: 30px;*/
   /*padding-top: 82px;*/
 }
-ul:last-child {
-  /*margin-bottom: 30px;*/
+.last-item {
+  margin-bottom: 30px;
 }
 
 /*.freeze {
@@ -99,7 +99,7 @@ ul:last-child {
   .map-container {
     position: fixed !important;
     width: 50vw !important;
-    height: 90vh;
+    height: 89vh;
     box-sizing: border-box;
     float: right !important;
     margin-top: 3px;
@@ -126,7 +126,7 @@ ul:last-child {
 @media screen and (min-width: 1000px) {
   .map-container {
     width: 40vw !important;
-    height: 90vh;
+    height: 89vh;
     box-sizing: border-box;
     float: right !important;
   }

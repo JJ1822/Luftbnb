@@ -8,7 +8,7 @@ class SpotIndex extends React.Component {
   }
 
   render() {
-
+    $("ul div:last-child").addClass("last-item");
     const { spots } = this.props;
     const spotItem = spots.map(spot => <SpotIndexItem key={spot.id} spot={spot} />);
     return (
