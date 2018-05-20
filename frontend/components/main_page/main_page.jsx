@@ -31,7 +31,7 @@ class MainPage extends React.Component {
 
 
   myFunction() {
-    if ( $(window).width() > 739) {
+    if ( $(window).width() > 600) {
   //Add your javascript for large screens here
     console.log(this);
     } else {
