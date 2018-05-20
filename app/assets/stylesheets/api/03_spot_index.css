@@ -77,6 +77,13 @@
 .spot-index-rating {
   margin-top: 5px;
 }
+.card-parent {
+  /*margin-bottom: 30px;*/
+  /*padding-top: 82px;*/
+}
+ul:last-child {
+  /*margin-bottom: 30px;*/
+}
 
 /*.freeze {
   position: fixed;
@@ -145,11 +152,11 @@
   .spot-index-item {
     width: 33%;
     /*padding: 50px;*/
-    height: 24vw;
+    height: 22vw;
     box-sizing: border-box;
     float: left;
   }
   .spot-index-image {
-    height: 15vw;
+    height: 13vw;
   }
   }
