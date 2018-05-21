@@ -124,6 +124,12 @@ grid-template-columns: 1fr 93vw;
     }
   }
 @media screen and (min-width: 1000px) {
+    .spot-grid {
+      display: grid;
+      grid-template-columns: 1fr 93vw;
+      grid-template-rows: 75vh 2rem 1fr;
+    /* grid-column-gap: 4rem; */
+    }
     .show-div-icons {
 
       width: 25%;
