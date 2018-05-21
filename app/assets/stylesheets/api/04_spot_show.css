@@ -130,13 +130,22 @@ grid-template-columns: 1fr 93vw;
       grid-template-rows: 75vh 2rem 1fr;
     /* grid-column-gap: 4rem; */
     }
+    .show-amenities {
+      padding-right: 150px;
+    }
     .show-div-icons {
 
-      width: 25%;
+      width: 18%;
 
     }
     .show-amenit {
       width: 33%;
       margin-bottom: 30px;
+    }
+    .show-details img {
+      width: 22px;
+    }
+    .show-icons {
+      width: 12%;
     }
   }
