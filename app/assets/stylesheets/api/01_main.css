@@ -279,7 +279,7 @@ i {
 }
 
 .margin-no {
-  margin-left: 20px;
+  margin-left: 0;
 }
 .drop-div {
     display: flex;
