@@ -326,6 +326,15 @@ i {
 .ReactModal__Overlay--after-open {
   z-index: 1;
 }
+@media screen and (max-width: 375px) {
+  .about-div span {
+    float: left;
+  }
+  .linkin {
+    float: left;
+  }
+
+  }
 
 
 
