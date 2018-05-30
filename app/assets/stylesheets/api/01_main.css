@@ -331,11 +331,15 @@ i {
     float: left;
   }
   .linkin {
-    float: left;
-  }
+    float: left; .
 
   }
 
+  }
+  @media screen and (min-width: 376px) {
+    .span-name {
+      margin-right: 25px;
+    }
 
 
 
@@ -345,6 +349,9 @@ i {
     color: black;
     border-bottom: 1px solid #e4e4e4;
 
+  }
+  .span-name {
+    margin-right: 0;
   }
   .drop-div {
     display: flex;

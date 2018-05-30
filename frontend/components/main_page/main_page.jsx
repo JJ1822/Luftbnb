@@ -179,7 +179,7 @@ class MainPage extends React.Component {
                 <div className="about-div">
                   <span>Airbnb clone</span>
 
-                  <span>  by Jay Johnson |</span>
+                  <span className="span-name">  by Jay Johnson |</span>
 
                   <a className ="linkin margin-no" href="https://github.com/JJ1822/"><i className="fab fa-github-square"></i></a>
                   <a className ="linkin" href="https://www.linkedin.com/in/jay-johnson-4b577341/"><i className="fab fa-linkedin"></i></a>
