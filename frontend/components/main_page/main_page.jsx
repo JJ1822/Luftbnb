@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
 import SpotIndexItem from './spot_index_item';
 
-const bounds = { bounds: {
-    northEast: {latitude: 48.241715, longitude: -63.925213},
-    southWest: {latitude: 22.163913, longitude: -129.623454}
+const bounds = {  bounds: {
+  northEast: {latitude: 48.241715, longitude: -63.925213},
+  southWest: {latitude: 22.163913, longitude: -129.623454}
     }
   }
 
@@ -21,9 +21,9 @@ class MainPage extends React.Component {
     this.myFunction = this.myFunction.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     // if(this.props.match.path === "/") {
-    //   // this.props.fetchSpots(bounds)
+      this.props.fetchSpots(bounds)
     // }
 
   }
