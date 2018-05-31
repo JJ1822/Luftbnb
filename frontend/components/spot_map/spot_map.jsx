@@ -27,6 +27,7 @@ class SpotMap extends React.Component {
     this.map = new google.maps.Map(this.refs.map, this.mapOptions[this.city]);
      this.MarkerManager = new MarkerManager(this.map);
      this.registerListeners();
+     console.log(this.MarkerManager);
      // this.MarkerManager.updateMarkers(this.props.spots);
   }
 

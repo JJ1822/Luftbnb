@@ -22,9 +22,9 @@ class MainPage extends React.Component {
   }
 
   componentDidMount() {
-    // if(this.props.match.path === "/") {
+    if(this.props.match.path === "/") {
       this.props.fetchSpots(bounds)
-    // }
+    }
 
   }
 
