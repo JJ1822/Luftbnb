@@ -22,9 +22,9 @@ class MainPage extends React.Component {
   }
 
   componentWillMount() {
-    if(this.props.match.path === "/") {
-      // this.props.fetchSpots(bounds)
-    }
+    // if(this.props.match.path === "/") {
+    //   // this.props.fetchSpots(bounds)
+    // }
 
   }
 
@@ -33,7 +33,8 @@ class MainPage extends React.Component {
   myFunction() {
     if ( $(window).width() > 600) {
   //Add your javascript for large screens here
-    console.log(this);
+      this.props.history.push("/")
+      // console.log(this.props);
     } else {
   //Add your javascript for small screens here
     document.getElementById("myDropdown").classList.toggle("show");
