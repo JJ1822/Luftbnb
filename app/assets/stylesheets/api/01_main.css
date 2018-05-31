@@ -271,11 +271,6 @@ i {
   width: 100%;
   position: relative;
   z-index: 1;
-  /*position: absolute;*/
-  /*background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
-  /*z-index: 1;*/
 }
 
 .margin-no {
@@ -288,7 +283,6 @@ i {
     border-bottom: 1px solid #008489;
     margin-left: 30px;
     margin-right: 30px;
-    /*padding-right: 0;*/
     font-size: 90%;
 }
 
@@ -357,11 +351,9 @@ i {
     display: flex;
     width: 100%;
     padding: 0;
-    /* border-bottom: 1px solid #008489; */
-     margin-left: 0;
-     margin-right: 0;
-     border-bottom: none;
-    /* padding-right: 0; */
+    margin-left: 0;
+    margin-right: 0;
+    border-bottom: none;
   }
   .about-div {
     display: flex;
@@ -373,7 +365,6 @@ i {
     max-height:60vh;
   }
   .spot-main-item {
-    /* margin-bottom: 20px; */
     padding-right: 40px;
     width: 43%;
   }
