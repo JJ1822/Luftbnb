@@ -32,7 +32,7 @@ class SpotMap extends React.Component {
   }
 
   componentDidUpdate() {
-    // this.MarkerManager.updateMarkers(this.props.spots);
+    this.MarkerManager.updateMarkers(this.props.spots);
   }
 
   registerListeners() {
@@ -52,7 +52,7 @@ class SpotMap extends React.Component {
   }
 
   render() {
-    
+
     return (
       <div className="map-container" ref="map">
         Map
