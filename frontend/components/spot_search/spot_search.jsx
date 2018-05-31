@@ -8,7 +8,7 @@ class SpotSearch extends React.Component {
 
   render() {
     const {spots, bounds, fetchSpots, updateBounds } = this.props;
-    console.log(this);
+  
     return (
       <div>
         <div className="map-parent">

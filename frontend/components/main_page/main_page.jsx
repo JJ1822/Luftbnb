@@ -34,7 +34,7 @@ class MainPage extends React.Component {
     if ( $(window).width() > 600) {
   //Add your javascript for large screens here
       this.props.history.push("/")
-      // console.log(this.props);
+    
     } else {
   //Add your javascript for small screens here
     document.getElementById("myDropdown").classList.toggle("show");

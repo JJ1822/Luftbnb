@@ -6,13 +6,13 @@ class SpotShow extends React.Component {
 
   componentDidMount() {
       this.props.fetchSpot(parseInt(this.props.match.params.spotId));
-    
+
 
   }
   render() {
 
     const { spot, spotId, fetchSpot, reviews } = this.props;
-    console.log("working", this.props);
+  
     if(!spot) {
       return null;
     }
