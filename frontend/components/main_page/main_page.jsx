@@ -34,7 +34,7 @@ class MainPage extends React.Component {
     if ( $(window).width() > 600) {
   //Add your javascript for large screens here
       this.props.history.push("/")
-    
+
     } else {
   //Add your javascript for small screens here
     document.getElementById("myDropdown").classList.toggle("show");
@@ -51,16 +51,16 @@ class MainPage extends React.Component {
     if(this.props.currentUser) {
       return (
         <div id="dropdown" className="header-list dropdown-content">
-          <div className="link-item"><Link onClick={this.myFunction} to="/host">Become a host</Link></div>
-          <div className="link-item"><Link onClick={this.myFunction} to="/">Trips</Link></div>
-          <div className="link-item last-item"><Link onClick={this.otherFunction} to="/">Log out</Link></div>
+          <div className="link-item"><Link onClick={this.myFunction} to="/host" replace>Become a host</Link></div>
+          <div className="link-item"><Link onClick={this.myFunction} to="/" >Trips</Link></div>
+          <div className="link-item last-item"><Link onClick={this.otherFunction} to="/" >Log out</Link></div>
         </div>
       );
     } else {
       return (
         <div id="dropdown" className="header-list dropdown-content">
-          <div className="link-item"><Link onClick={this.openModal} to="/signup">Sign up</Link></div>
-          <div className="link-item last-item"><Link onClick={this.openModal} to="/login">Log In</Link></div>
+          <div className="link-item"><Link onClick={this.openModal} to="/signup" >Sign up</Link></div>
+          <div className="link-item last-item"><Link onClick={this.openModal} to="/login" >Log In</Link></div>
         </div>
         );
       }
