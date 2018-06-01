@@ -131,7 +131,7 @@
     width: 32px;
     height: 32px;
     border-width: 1px;
-    z-index: -1;
+
 }
 
 .minus {
@@ -148,7 +148,6 @@
     width: 32px;
     height: 32px;
     border-width: 1px;
-    z-index: -1;
 }
 
 .minus img {
@@ -258,7 +257,7 @@
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  
+
 }
 
 

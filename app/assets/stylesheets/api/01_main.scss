@@ -6,8 +6,8 @@ body {
 }
 
 .header {
-
-
+  position: fixed;
+  z-index: 1;
 }
 
 .link-item {
@@ -37,7 +37,7 @@ body {
 
 .navigation-div {
   padding: 0 20px;
-
+  padding-top: 82px;
 }
 
 .cont {
@@ -68,7 +68,7 @@ body {
 }
 
 .photo {
-  background-image: url(https://cdn.pixabay.com/photo/2016/12/01/12/24/san-francisco-1875185_960_720.jpg);
+  background-image: url(asset_path('sf.jpg'));
   background-size: cover;
   height: 100%;
   width: 45%;
@@ -368,6 +368,7 @@ i {
 
   .freeze {
     position: fixed;
+    z-index: 1;
   }
 
   .header-nav {
