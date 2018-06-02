@@ -3,9 +3,9 @@ import React from 'react';
 class SpotAutocomplete extends React.Component {
 
   componentDidMount() {
-    var input = document.getElementById('autocomplete');
+    var input = document.getElementById('searchbar');
     var options = {componentRestrictions: {country: 'us'}};
-    let autoComplete = new google.maps.places.Autocomplete(input, options);
+    let autoComplete = new google.maps.places.  Autocomplete(input, options);
 
     autoComplete.addListener('place_changed', () => {
       let place = autoComplete.getPlace();
