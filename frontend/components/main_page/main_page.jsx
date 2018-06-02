@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
 import SpotIndexItem from './spot_index_item';
+import SearchBar from '../search_bar/search_bar';
 
 const bounds = {  bounds: {
   northEast: {latitude: 48.241715, longitude: -63.925213},
