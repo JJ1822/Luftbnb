@@ -1,6 +1,6 @@
 class Api::SpotsController < ApplicationController
 
-  before_action :require_user
+  before_action :require_user, only: [:show, :create]
 
 
   def index
