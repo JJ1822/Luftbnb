@@ -24,7 +24,8 @@ class MainPage extends React.Component {
 
   componentDidMount() {
     // if(this.props.match.path === "/") {
-      this.props.fetchSpots(bounds)
+      this.props.fetchSpots(bounds);
+      // this.spots = this.props.spots;
     // }
 
   }
@@ -95,7 +96,7 @@ class MainPage extends React.Component {
     const randSpot = () => {
 
       if(this.props.currentUser && this.props.pathname === "/" ) {
-        const spotItem = this.props.spots.slice(7,12).map(spot => <SpotIndexItem key={spot.id} spot={spot} />);
+        const spotItem = this.props.spots.slice(0,5).map(spot => <SpotIndexItem key={spot.id} spot={spot} />);
         return (
             <div className="spot-item-main">
               <ul className="main-ul">
@@ -195,7 +196,7 @@ class MainPage extends React.Component {
 
             </div>
           </div>
-          <SearchBar />
+      
 
 
 
