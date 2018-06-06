@@ -4,6 +4,18 @@ body {
   font-weight: 400;
   background: white;
 }
+#searchbar {
+  padding: 7px 8px;
+  border: 1px solid #008489;
+  border-radius: 4px;
+  width: 24vw;
+  font-size: 18px;
+  line-height: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+.search-bar {
+  z-index: 1;
+}
 
 .header {
   position: fixed;

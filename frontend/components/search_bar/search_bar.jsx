@@ -21,7 +21,7 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <div className="autoComplete-form">
+      <div className="search-bar">
         <input id="searchbar" placeholder="Search for a City"
            type="text"></input>
       </div>
