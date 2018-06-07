@@ -5,9 +5,10 @@ class SearchBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      place = ""
+      place: ""
     }
     this.handleKeyPress = this.handleKeyPress.bind(this);
+    // this.update = this.update.bind(this);
   }
 
   componentDidMount() {
@@ -21,7 +22,17 @@ class SearchBar extends React.Component {
     autoComplete.addListener('place_changed', () => {
       let place = autoComplete.getPlace();
       let location = place.geometry.location;
-      this.props.update(location)
+      this.setState({
+        place: place.formatted_address
+      });
+
+    });
+  }
+  //
+  update(field) {
+  //
+    return e => this.setState({
+      [field]: e.currentTarget.value
     });
   }
 
@@ -35,8 +46,8 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div className="search-bar">
-        <input id="searchbar" placeholder="Search for a City"
-           type="text" onKeyPress={this.handleKeyPress}></input>
+        <input id="searchbar" placeholder="Search for a City" value={this.state.place}
+           type="text" onKeyPress={this.handleKeyPress} onChange={this.update('place')} ></input>
       </div>
     );
   }
