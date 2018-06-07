@@ -196,7 +196,7 @@ class MainPage extends React.Component {
 
             </div>
           </div>
-          <SearchBar />
+          <SearchBar history={this.props.history} />
 
 
 
