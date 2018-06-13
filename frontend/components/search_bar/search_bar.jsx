@@ -5,8 +5,10 @@ class SearchBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      place: ""
+      lat: 0,
+      lng: 0
     }
+    this.test;
     this.handleKeyPress = this.handleKeyPress.bind(this);
     // this.update = this.update.bind(this);
   }
@@ -22,23 +24,24 @@ class SearchBar extends React.Component {
     autoComplete.addListener('place_changed', () => {
       let place = autoComplete.getPlace();
       let location = place.geometry.location;
-      this.setState({
-        place: place.formatted_address
-      });
+      this.update(location);
+
 
     });
   }
-  //
-  update(field) {
-  //
-    return e => this.setState({
-      [field]: e.currentTarget.value
-    });
+
+  update(places) {
+    this.setState({
+      lat: places.lat(),
+      lng: places.lng()
+    })
   }
 
-  handleKeyPress() {
-    console.log(this);
-    // this.props.history.push("/city/")
+  handleKeyPress(e) {
+    if (e.key === 'Enter') {
+        this.props.history.push(`/city/${this.state.lat}`)
+    }
+
   }
 
 
@@ -46,8 +49,8 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div className="search-bar">
-        <input id="searchbar" placeholder="Search for a City" value={this.state.place}
-           type="text" onKeyPress={this.handleKeyPress} onChange={this.update('place')} ></input>
+        <input id="searchbar" placeholder="Search for a City"
+           type="text" onKeyPress={this.handleKeyPress}  ></input>
       </div>
     );
   }
