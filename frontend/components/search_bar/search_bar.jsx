@@ -25,21 +25,28 @@ class SearchBar extends React.Component {
       let place = autoComplete.getPlace();
       let location = place.geometry.location;
       this.update(location);
-
-
     });
   }
 
   update(places) {
-    this.setState({
-      lat: places.lat(),
-      lng: places.lng()
+    return new Promise((resolve, reject) => {
+      if(places) {
+        resolve(this.setState({
+          lat: places.lat(),
+          lng: places.lng()
+        }));
+      }
     })
+
   }
 
   handleKeyPress(e) {
     if (e.key === 'Enter') {
-        this.props.history.push(`/city/${this.state.lat}`)
+      e.preventDefault();
+        this.update().then(
+          this.props.history.push(`/city/${this.state.lat}`)
+        )
+        console.log(this);
     }
 
   }
