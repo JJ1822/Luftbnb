@@ -30,6 +30,13 @@ class MainPage extends React.Component {
 
   }
 
+  update(places) {
+    this.setState({
+          lat: places.lat(),
+          lng: places.lng()
+        });
+  }
+
 
 
   myFunction() {
@@ -196,7 +203,7 @@ class MainPage extends React.Component {
 
             </div>
           </div>
-          <SearchBar history={this.props.history} />
+          <SearchBar update={this.update} history={this.props.history} />
 
 
 

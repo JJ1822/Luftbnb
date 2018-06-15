@@ -29,16 +29,11 @@ class SearchBar extends React.Component {
   }
 
   update(places) {
-    return new Promise((resolve, reject) => {
-      if(places) {
-        resolve(this.setState({
+    this.setState({
           lat: places.lat(),
           lng: places.lng()
-        }));
+        });
       }
-    })
-
-  }
 
   handleKeyPress(e) {
     if (e.key === 'Enter') {
