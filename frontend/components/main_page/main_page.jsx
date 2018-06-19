@@ -14,7 +14,9 @@ class MainPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modalIsOpen: false
+      modalIsOpen: false,
+      latitude: 0,
+      longitude: 0
     };
     this.spots = [];
     this.openModal = this.openModal.bind(this);
@@ -35,7 +37,8 @@ class MainPage extends React.Component {
     this.setState({
       latitude: places.lat(),
       longitude: places.lng()
-    })
+
+    }, () => this.props.history.push(`/city/${this.state.latitude}`))
   }
 
 
@@ -52,7 +55,6 @@ class MainPage extends React.Component {
       }
   }
   closeOut() {
-
     this.props.logout();
     this.toggleFunction();
   }
@@ -204,7 +206,7 @@ class MainPage extends React.Component {
 
             </div>
           </div>
-          <SearchBar update={this.update} history={this.props.history} />
+          <SearchBar update={this.updateLatLong} history={this.props.history} lat={this.state.latitude} />
 
 
 

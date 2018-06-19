@@ -4,10 +4,6 @@ class SearchBar extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      lat: 0,
-      lng: 0
-    }
     this.test;
     this.handleKeyPress = this.handleKeyPress.bind(this);
     // this.update = this.update.bind(this);
@@ -28,16 +24,13 @@ class SearchBar extends React.Component {
     });
   }
 
-  update() {
-   }
-
   handleKeyPress(e) {
-    if (e.key === 'Enter') {
-      e.preventDefault();
-      console.log(this);
-
-          this.props.history.push(`/city/${this.state.lat}`)
-    }
+    // e.preventDefault();
+    // if (e.key === 'Enter') {
+    //   console.log(this);
+    //
+    //       this.props.history.push(`/city/${this.props.lat}`)
+    // }
   }
 
   render() {
