@@ -20,7 +20,7 @@ class SearchBar extends React.Component {
                     componentRestrictions: {country: 'us'}
                   };
     let autoComplete = new google.maps.places.Autocomplete(input, options);
-
+    this.test = autoComplete;
     autoComplete.addListener('place_changed', () => {
       let place = autoComplete.getPlace();
       let location = place.geometry.location;
@@ -28,23 +28,17 @@ class SearchBar extends React.Component {
     });
   }
 
-  // update(places) {
-  //   this.setState({
-  //         lat: places.lat(),
-  //         lng: places.lng()
-  //       });
-  //     }
+  update() {
+   }
 
   handleKeyPress(e) {
     if (e.key === 'Enter') {
       e.preventDefault();
+      console.log(this);
+
           this.props.history.push(`/city/${this.state.lat}`)
-        console.log(this);
     }
-
   }
-
-
 
   render() {
     return (

@@ -19,7 +19,8 @@ class MainPage extends React.Component {
     this.spots = [];
     this.openModal = this.openModal.bind(this);
     this.otherFunction = this.otherFunction.bind(this);
-    this.myFunction = this.myFunction.bind(this);
+    this.toggleFunction = this.toggleFunction.bind(this);
+    this.updateLatLong = this.updateLatLong.bind(this);
   }
 
   componentDidMount() {
@@ -30,16 +31,16 @@ class MainPage extends React.Component {
 
   }
 
-  update(places) {
+  updateLatLong(places) {
     this.setState({
-          lat: places.lat(),
-          lng: places.lng()
-        });
+      latitude: places.lat(),
+      longitude: places.lng()
+    })
   }
 
 
 
-  myFunction() {
+  toggleFunction() {
     if ( $(window).width() > 600) {
   //Add your javascript for large screens here
       this.props.history.push("/")
@@ -53,15 +54,15 @@ class MainPage extends React.Component {
   otherFunction() {
 
     this.props.logout();
-    this.myFunction();
+    this.toggleFunction();
   }
 
   loginLink() {
     if(this.props.currentUser) {
       return (
         <div id="dropdown" className="header-list dropdown-content">
-          <div className="link-item"><Link onClick={this.myFunction} to="/host" replace>Become a host</Link></div>
-          <div className="link-item"><Link onClick={this.myFunction} to="/" >Trips</Link></div>
+          <div className="link-item"><Link onClick={this.toggleFunction} to="/host" replace>Become a host</Link></div>
+          <div className="link-item"><Link onClick={this.toggleFunction} to="/" >Trips</Link></div>
           <div className="link-item last-item"><Link onClick={this.otherFunction} to="/" >Log out</Link></div>
         </div>
       );
@@ -77,7 +78,7 @@ class MainPage extends React.Component {
 
   openModal() {
     this.setState({modalIsOpen: true});
-    this.myFunction();
+    this.toggleFunction();
   }
 
 
@@ -178,7 +179,7 @@ class MainPage extends React.Component {
           <nav className="header-nav">
             <div className="left">
               <h1 className="header-logo">
-              <div onClick={this.myFunction}className="header-image">
+              <div onClick={this.toggleFunction}className="header-image">
                 <Link to={this.props.pathname}>
                   <img src={window.staticImages.headerImage}></img>
                 </Link>
