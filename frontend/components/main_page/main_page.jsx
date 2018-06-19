@@ -18,7 +18,7 @@ class MainPage extends React.Component {
     };
     this.spots = [];
     this.openModal = this.openModal.bind(this);
-    this.otherFunction = this.otherFunction.bind(this);
+    this.closeOut = this.closeOut.bind(this);
     this.toggleFunction = this.toggleFunction.bind(this);
     this.updateLatLong = this.updateLatLong.bind(this);
   }
@@ -51,7 +51,7 @@ class MainPage extends React.Component {
     document.getElementById("dropdown").classList.toggle("show-2");
       }
   }
-  otherFunction() {
+  closeOut() {
 
     this.props.logout();
     this.toggleFunction();
@@ -63,7 +63,7 @@ class MainPage extends React.Component {
         <div id="dropdown" className="header-list dropdown-content">
           <div className="link-item"><Link onClick={this.toggleFunction} to="/host" replace>Become a host</Link></div>
           <div className="link-item"><Link onClick={this.toggleFunction} to="/" >Trips</Link></div>
-          <div className="link-item last-item"><Link onClick={this.otherFunction} to="/" >Log out</Link></div>
+          <div className="link-item last-item"><Link onClick={this.closeOut} to="/" >Log out</Link></div>
         </div>
       );
     } else {
