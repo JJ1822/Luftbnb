@@ -30,8 +30,14 @@ class SpotMap extends React.Component {
     }
   }
   componentDidMount() {
+    var Lat = parseFloat(queryString.parse(this.props.location.search).lat);
+    var Lng = parseFloat(queryString.parse(this.props.location.search).lng);
+    var city = {
+      center: { lat: Lat, lng: Lng }, zoom: 13
+    }
 
-    this.map = new google.maps.Map(this.refs.map, this.city);
+    this.map = new google.maps.Map(this.refs.map, city);
+
      this.MarkerManager = new MarkerManager(this.map);
      this.registerListeners();
      // console.log(this.MarkerManager);
@@ -39,6 +45,7 @@ class SpotMap extends React.Component {
   }
 
   componentDidUpdate() {
+
     this.MarkerManager.updateMarkers(this.props.spots);
   }
 

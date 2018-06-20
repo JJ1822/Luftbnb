@@ -4,7 +4,10 @@ class SearchBar extends React.Component {
 
   constructor(props) {
     super(props);
-    this.test;
+    this.state = {
+      latitude: 0,
+      longitude: 0
+    };
     this.handleKeyPress = this.handleKeyPress.bind(this);
     // this.update = this.update.bind(this);
   }
@@ -20,8 +23,20 @@ class SearchBar extends React.Component {
     autoComplete.addListener('place_changed', () => {
       let place = autoComplete.getPlace();
       let location = place.geometry.location;
-      this.props.update(location);
+      this.updateLatLong(location);
     });
+  }
+
+  updateLatLong(places) {
+    this.setState({
+      latitude: places.lat(),
+      longitude: places.lng()
+
+    }, () => {
+      this.props.history.push(`/city?lat=${this.state.latitude}&lng=${this.state.longitude}`);
+      window.location.reload();
+    })
+
   }
 
   handleKeyPress(e) {
