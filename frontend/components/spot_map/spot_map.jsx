@@ -37,6 +37,7 @@ class SpotMap extends React.Component {
 
   registerListeners() {
     this.listener = google.maps.event.addListener(this.map, 'idle', () => {
+      console.log(this);
       const { north, south, east, west } = this.map.getBounds().toJSON();
       const bounds = {
         northEast: { latitude: north, longitude: east },
