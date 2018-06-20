@@ -38,7 +38,7 @@ class MainPage extends React.Component {
       latitude: places.lat(),
       longitude: places.lng()
 
-    }, () => this.props.history.push(`/city/${this.state.latitude}`))
+    }, () => this.props.history.push(`/city?lat=${this.state.latitude}&lng=${this.state.longitude}`))
   }
 
 

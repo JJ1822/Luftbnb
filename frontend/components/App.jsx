@@ -17,7 +17,7 @@ const App = () => (
     <Route exact path="/spots" component={ SpotSearchContainer } />
     <Route exact path="/host" component={ SpotFormContainer } />
     <Route path="/spots/:spotId" component={ SpotShowContainer } />
-    <Route exact path="/city/:city" component={ SpotSearchContainer }/>
+    <Route path="/city" component={ SpotSearchContainer }/>
   </div>
 );
 
