@@ -1,6 +1,7 @@
 import React from 'react';
 import {withRouter} from 'react-router'
 import MarkerManager from '../../util/marker_manager';
+import queryString from 'query-string';
 
 // const mapOptions = {
 //   sanfrancisco: { center: { lat: 37.778839, lng: -122.428188 }, zoom: 13},
@@ -20,11 +21,17 @@ class SpotMap extends React.Component {
       denver: { center: { lat: 39.742881, lng: -104.987526 }, zoom: 13},
       houston: { center: { lat: 29.757229, lng: -95.361977 }, zoom: 13}
     };
-    this.city = this.props.match.params.city;
+    this.Lat = parseFloat(queryString.parse(this.props.location.search).lat);
+    this.Lng = parseFloat(queryString.parse(this.props.location.search).lng);
+
+
+    this.city = {
+      center: { lat: this.Lat, lng: this.Lng }, zoom: 13
+    }
   }
   componentDidMount() {
 
-    this.map = new google.maps.Map(this.refs.map, this.mapOptions[this.city]);
+    this.map = new google.maps.Map(this.refs.map, this.city);
      this.MarkerManager = new MarkerManager(this.map);
      this.registerListeners();
      // console.log(this.MarkerManager);
