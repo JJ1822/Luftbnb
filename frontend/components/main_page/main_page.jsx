@@ -23,6 +23,7 @@ class MainPage extends React.Component {
     this.closeOut = this.closeOut.bind(this);
     this.toggleFunction = this.toggleFunction.bind(this);
     this.updateLatLong = this.updateLatLong.bind(this);
+    this.checkAuth = this.checkAuth.bind(this);
   }
 
   componentDidMount() {
@@ -78,6 +79,13 @@ class MainPage extends React.Component {
       }
   }
 
+  checkAuth(e) {
+    if(!this.props.currentUser) {
+      e.preventDefault();
+      this.props.history.push('/login')
+    }
+  }
+
   openModal() {
     this.setState({modalIsOpen: true});
     this.toggleFunction();
@@ -106,7 +114,7 @@ class MainPage extends React.Component {
     const randSpot = () => {
 
       if(this.props.pathname === "/" ) {
-        const spotItem = this.props.spots.slice(0,5).map(spot => <SpotIndexItem key={spot.id} spot={spot} />);
+        const spotItem = this.props.spots.slice(0,5).map(spot => <SpotIndexItem checkAuth={this.checkAuth} key={spot.id} spot={spot} />);
         return (
             <div className="spot-item-main">
               <ul className="main-ul">
@@ -124,42 +132,42 @@ class MainPage extends React.Component {
                 {window.scrollTo(0, 0)}
 
                   <div className="loc-button">
-                    <Link className="loc-link" to='/city?lat=37.778839&lng=-122.428188'>
+                    <Link onClick={this.checkAuth} className="loc-link" to='/city?lat=37.778839&lng=-122.428188'>
                       <div className="photo"></div>
                       <div className="loc-title"><h1>San Francisco</h1></div>
                     </Link>
                   </div>
 
                   <div className="loc-button">
-                    <Link className="loc-link" to='/city?lat=30.271633&lng=-97.744802'>
+                    <Link onClick={this.checkAuth} className="loc-link" to='/city?lat=30.271633&lng=-97.744802'>
                       <div className="photoa"></div>
                       <div className="loc-title"><h1>Austin</h1></div>
                     </Link>
                   </div>
 
                   <div className="loc-button">
-                    <Link className="loc-link" to='/city?lat=32.715952&lng=-117.160570'>
+                    <Link onClick={this.checkAuth} className="loc-link" to='/city?lat=32.715952&lng=-117.160570'>
                       <div className="photosan"></div>
                       <div className="loc-title"><h1>San Diego</h1></div>
                     </Link>
                   </div>
 
                   <div className="loc-button">
-                    <Link className="loc-link" to='/city?lat=34.043709&lng=-118.247979'>
+                    <Link onClick={this.checkAuth} className="loc-link" to='/city?lat=34.043709&lng=-118.247979'>
                       <div className="photola"></div>
                       <div className="loc-title"><h1>Los Angeles</h1></div>
                     </Link>
                   </div>
 
                   <div className="loc-button">
-                    <Link className="loc-link" to='/city?lat=39.742881&lng=-104.987526'>
+                    <Link onClick={this.checkAuth} className="loc-link" to='/city?lat=39.742881&lng=-104.987526'>
                       <div className="photoden"></div>
                       <div className="loc-title"><h1>Denver</h1></div>
                     </Link>
                   </div>
 
                   <div className="loc-button">
-                    <Link className="loc-link" to='/city?lat=29.757229&lng=-95.361977'>
+                    <Link onClick={this.checkAuth} className="loc-link" to='/city?lat=29.757229&lng=-95.361977'>
                       <div className="photohou"></div>
                       <div className="loc-title"><h1>Houston</h1></div>
                     </Link>
@@ -206,7 +214,6 @@ class MainPage extends React.Component {
 
             </div>
           </div>
-          <SearchBar update={this.updateLatLong} history={this.props.history} lat={this.state.latitude} />
 
 
 
@@ -245,3 +252,8 @@ export default MainPage;
 // const MainPage = ({ currentUser, logout }) => (
 //   currentUser ? user(currentUser, logout) : noUser()
 // );
+
+
+
+
+// <SearchBar update={this.updateLatLong} history={this.props.history} lat={this.state.latitude} />

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const SpotIndexItem = ({ spot }) => {
+const SpotIndexItem = ({ spot, checkAuth }) => {
 
     return (
         <div className="spot-main-item">
-          <Link className="main-link" to={`/spots/${spot.id}`}>
+          <Link onClick={ checkAuth } className="main-link" to={`/spots/${spot.id}`}>
           <img className="spot-main-image" src={spot.img_url}/>
           <div className="spot-index-type">
             <span className="type">{spot.room_type}<span className="dot">-</span>{spot.num_beds}</span>

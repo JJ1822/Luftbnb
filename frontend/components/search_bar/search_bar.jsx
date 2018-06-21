@@ -34,7 +34,7 @@ class SearchBar extends React.Component {
 
     }, () => {
       this.props.history.push(`/city?lat=${this.state.latitude}&lng=${this.state.longitude}`);
-      window.location.reload();
+      // window.location.reload();
     })
 
   }
