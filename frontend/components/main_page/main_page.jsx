@@ -214,6 +214,7 @@ class MainPage extends React.Component {
 
             </div>
           </div>
+          <SearchBar update={this.updateLatLong} history={this.props.history} lat={this.state.latitude} />
 
 
 
@@ -252,8 +253,3 @@ export default MainPage;
 // const MainPage = ({ currentUser, logout }) => (
 //   currentUser ? user(currentUser, logout) : noUser()
 // );
-
-
-
-
-// <SearchBar update={this.updateLatLong} history={this.props.history} lat={this.state.latitude} />
