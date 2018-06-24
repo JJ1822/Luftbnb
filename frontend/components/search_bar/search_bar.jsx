@@ -27,6 +27,10 @@ class SearchBar extends React.Component {
     });
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    console.log(prevProps, prevState);
+  }
+
   updateLatLong(places) {
     this.setState({
       latitude: places.lat(),
