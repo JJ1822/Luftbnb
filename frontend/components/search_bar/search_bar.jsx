@@ -28,7 +28,7 @@ class SearchBar extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    console.log(prevProps, prevState);
+    // this.props.history.push(`/city?lat=${prevState.lat}&lng=${prevState.lng}`);
   }
 
   updateLatLong(places) {
