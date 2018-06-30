@@ -32,19 +32,21 @@ class SpotMap extends React.Component {
      // this.MarkerManager.updateMarkers(this.props.spots);
   }
 
-  componentDidUpdate() {
-   // console.log(this.map);
+  componentDidUpdate(prevProps, prevState) {
+   console.log(prevProps);
+   console.log(prevState);
+   // window.location.reload();
+   // this.map = new google.maps.Map(this.refs.map, { center: { lat: this.state.lat, lng: this.state.lng }, zoom: 13 });
+   // this.map = new google.maps.Map(this.refs.map, { center: { lat: this.state.lat, lng: this.state.lng }, zoom: 13 });
+   //
+   //  this.MarkerManager = new MarkerManager(this.map);
+   //  this.registerListeners();
     this.MarkerManager.updateMarkers(this.props.spots);
   }
 
-  componentWillReceiveProps(nextProps) {
-    this.setState({
-      lat: parseFloat(queryString.parse(nextProps.location.search).lat),
-      lng: parseFloat(queryString.parse(nextProps.location.search).lng)
-    })
-    console.log(this);
-    console.log(this.map);
-  }
+  // componentWillReceiveProps(prevState, nextProps) {
+  //
+  // }
 
   registerListeners() {
     this.listener = google.maps.event.addListener(this.map, 'idle', () => {

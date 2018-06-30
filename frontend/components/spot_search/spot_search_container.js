@@ -6,7 +6,8 @@ import { updateBounds } from '../../actions/filter_actions';
 
 const mapStateToProps = (state) => ({
   spots: Object.values(state.entities.spots),
-  bounds: state.ui.filters.bounds
+  bounds: state.ui.filters.bounds,
+  search: state
 });
 
 const mapDispatchToProps = (dispatch) => ({

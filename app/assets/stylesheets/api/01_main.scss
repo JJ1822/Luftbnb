@@ -73,6 +73,19 @@ body {
   overflow: hidden;
   box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.06);
 }
+.loc-button:before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 0%;
+  width: 100%;
+  // bottom: 0;
+  transition: height 0.5s ease-out;
+  background: linear-gradient(to bottom, transparent 0%, black 100%);
+}
+.loc-button:hover:before {
+  height: 100%;
+}
 
 .loc-title {
   display: flex;
