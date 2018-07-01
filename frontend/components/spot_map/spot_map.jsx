@@ -34,7 +34,9 @@ class SpotMap extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     let currentLat = this.map.getCenter().lat();
-    this.map.panTo(prevProps)
+    console.log(this);
+    console.log(prevState);
+    // this.map.setCenter(prevState);
     // this.setState({
     //   lat: prevProps.lat,
     //   lng: prevProps.lng
