@@ -33,8 +33,12 @@ class SpotMap extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-   console.log(prevProps);
-   console.log(prevState);
+    let currentLat = this.map.getCenter().lat();
+    this.map.panTo(prevProps)
+    // this.setState({
+    //   lat: prevProps.lat,
+    //   lng: prevProps.lng
+    // })
    // window.location.reload();
    // this.map = new google.maps.Map(this.refs.map, { center: { lat: this.state.lat, lng: this.state.lng }, zoom: 13 });
    // this.map = new google.maps.Map(this.refs.map, { center: { lat: this.state.lat, lng: this.state.lng }, zoom: 13 });
