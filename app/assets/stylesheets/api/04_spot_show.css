@@ -1,6 +1,6 @@
 .spot-show {
   grid-row: 1;
-  grid-column: 1/3;
+  grid-column: 1/4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +9,7 @@
 
 .spot-grid {
 display: grid;
-grid-template-columns: 1fr 93vw;
+grid-template-columns: 1fr 65vw 3fr;
 /*grid-template-rows: 75vh 2rem 1fr;*/
 /*grid-column-gap: 4rem;*/
 }
@@ -126,7 +126,7 @@ grid-template-columns: 1fr 93vw;
 @media screen and (min-width: 1000px) {
     .spot-grid {
       display: grid;
-      grid-template-columns: 1fr 93vw;
+      grid-template-columns: 1fr 65vw 3fr;
       grid-template-rows: 75vh 2rem 1fr;
     /* grid-column-gap: 4rem; */
     }
@@ -135,7 +135,7 @@ grid-template-columns: 1fr 93vw;
     }
     .show-div-icons {
 
-      width: 18%;
+      width: 24%;
 
     }
     .show-amenit {
