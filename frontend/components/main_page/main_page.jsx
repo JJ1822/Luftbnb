@@ -133,42 +133,42 @@ class MainPage extends React.Component {
 
                   <div className="loc-button">
                     <Link onClick={this.checkAuth} className="loc-link" to='/city?lat=37.778839&lng=-122.428188'>
-                      <div className="photo"></div>
+                      <div className="photo pic"></div>
                       <div className="loc-title"><h1>San Francisco</h1></div>
                     </Link>
                   </div>
 
-                  <div className="loc-button">
+                  <div className="loc-button hover-button">
                     <Link onClick={this.checkAuth} className="loc-link" to='/city?lat=30.271633&lng=-97.744802'>
-                      <div className="photoa"></div>
+                      <div className="photoa pic"></div>
                       <div className="loc-title"><h1>Austin</h1></div>
                     </Link>
                   </div>
 
-                  <div className="loc-button">
+                  <div className="loc-button hover-button">
                     <Link onClick={this.checkAuth} className="loc-link" to='/city?lat=32.715952&lng=-117.160570'>
-                      <div className="photosan"></div>
+                      <div className="photosan pic"></div>
                       <div className="loc-title"><h1>San Diego</h1></div>
                     </Link>
                   </div>
 
-                  <div className="loc-button">
+                  <div className="loc-button hover-button">
                     <Link onClick={this.checkAuth} className="loc-link" to='/city?lat=34.043709&lng=-118.247979'>
-                      <div className="photola"></div>
+                      <div className="photola pic"></div>
                       <div className="loc-title"><h1>Los Angeles</h1></div>
                     </Link>
                   </div>
 
-                  <div className="loc-button">
+                  <div className="loc-button hover-button">
                     <Link onClick={this.checkAuth} className="loc-link" to='/city?lat=39.742881&lng=-104.987526'>
-                      <div className="photoden"></div>
+                      <div className="photoden pic"></div>
                       <div className="loc-title"><h1>Denver</h1></div>
                     </Link>
                   </div>
 
-                  <div className="loc-button">
+                  <div className="loc-button hover-button">
                     <Link onClick={this.checkAuth} className="loc-link" to='/city?lat=29.757229&lng=-95.361977'>
-                      <div className="photohou"></div>
+                      <div className="photohou pic"></div>
                       <div className="loc-title"><h1>Houston</h1></div>
                     </Link>
                   </div>

@@ -72,6 +72,37 @@ body {
   border: solid 1px #e4e4e4;
   overflow: hidden;
   box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.07);
+  transition: box-shadow 1s;
+}
+// .loc-button::after {
+//   box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, .25) inset;
+//   opacity: 0;
+//   transition: opacity 0.3s ease-in-out;
+// }
+
+/* Transition to showing the bigger shadow on hover */
+// .loc-button:hover::after {
+//   opacity: 1;
+  // .pic{
+  //   z-index: -1;
+  // }
+// }
+// .hover-button {
+//   box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, .25) inset;
+//   opacity: 0;
+//   transition: opacity 0.3s ease-in-out;
+// }
+//
+// .hover-button:hover:before {
+//   opacity: 1;
+// }
+.loc-button:hover {
+  box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, .25) inset;
+  // transition: all 3s;
+  // z-index: 1;
+  .pic{
+    z-index: -1;
+  }
 }
 // .loc-button:before {
 //   content: '';
